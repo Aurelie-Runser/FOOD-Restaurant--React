@@ -7,8 +7,21 @@
   box-sizing: border-box;
 }
 
-div{
+body{
+    background-color: var(--c-white);
+}
+
+#root {
+    margin: 15px auto;
+    width: 85vw;
+    max-width: 1605px;
+    min-height: 100vh;
+    color: var(--c-black);
     font-family: var(--ff-Montserrat);
+}
+  
+section{
+    margin: 135px auto;
 }
 
 h1{
@@ -47,3 +60,7 @@ p{
     font-size: var(--fs-small);
     font-weight: var(--fw-regular);
 }
+
+a:hover {
+    color: var(--c-main);
+  }

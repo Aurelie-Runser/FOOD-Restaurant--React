@@ -3,8 +3,8 @@
 :root{
     --c-main: #F48E28;
     --c-main_light: #F5DDC4;
-    --c-white: #FFF;
-    --c-black: #000;
+    --c-white: #f1f1f1;
+    --c-black: #101010;
     --c-gray: #B6B6B6;
 
     --fs-small: .8rem;

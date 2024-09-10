@@ -6,8 +6,10 @@ function App() {
 
   return (
     <>
+    {/* <main className='mainbody'> */}
     <Header/>
       <p>Restaurant FOOD - React</p>
+    {/* </main> */}
     </>
   )
 }

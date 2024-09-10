@@ -1,10 +1,12 @@
 // import { useState } from 'react'
-import './App.css'
+import Header from './components/header/Header'
+import './main.css'
 
 function App() {
 
   return (
     <>
+    <Header/>
       <p>Restaurant FOOD - React</p>
     </>
   )

@@ -1,0 +1,49 @@
+@import './styles/reset.css';
+@import './styles/variables.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+div{
+    font-family: var(--ff-Montserrat);
+}
+
+h1{
+    font-size: var(--fs-extra);
+    font-weight: var(--fw-bold);
+}
+
+h2{
+    font-size: var(--fs-mega);
+    font-weight: var(--fw-bold);
+}
+
+h3{
+    font-size: var(--fs-big);
+    font-weight: var(--fw-bold);
+}
+
+
+h4{
+    font-size: var(--fs-regular);
+    font-weight: var(--fw-bold);
+}
+
+h5{
+    font-size: var(--fs-litle);
+    font-weight: var(--fw-semibold);
+}
+
+p{
+    font-size: var(--fs-litle);
+    font-weight: var(--fw-medium);
+    line-height: 1.25;
+}
+
+.p-small{
+    font-size: var(--fs-small);
+    font-weight: var(--fw-regular);
+}

@@ -1,0 +1,64 @@
+.icon{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    stroke: var(--c-black);
+    fill: var(--c-black);
+}
+
+/* direction */
+.gauche{
+    transform: rotate(180deg);
+}
+
+/* taille */
+.small{
+    height: 20px;
+    width: 20px;
+}
+
+.medium{
+    height: 42px;
+    width: 42px;
+    padding: 10px;
+}
+
+.big{
+    height: 98px;
+    width: 98px;
+    padding: 23px;
+}
+
+/* couleur */
+.black{
+    background-color:var(--c-black);
+    stroke:var(--c-white);
+    fill:var(--c-white);
+}
+
+.white{
+    background-color:var(--c-white);
+}
+
+.orange{
+    background-color:var(--c-main_light);
+    stroke:var(--c-main);
+    fill:var(--c-main);
+}
+
+.orangeWhite{
+    background-color:var(--c-main);
+    stroke:var(--c-white);
+    fill:var(--c-white);
+}
+
+.whiteOrange{
+    background-color:var(--c-white);
+    stroke:var(--c-main);
+    fill:var(--c-main);
+}
+
+.shadow{
+    box-shadow: 0 0 10px var(--c-gray);
+}

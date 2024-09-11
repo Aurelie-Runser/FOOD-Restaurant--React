@@ -1,0 +1,113 @@
+header {
+    display: none;
+    z-index: 50;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    margin-top: 15px;
+    background: var(--c-white);
+}
+
+@media screen and (min-width: 1024px) {
+    header{
+        display: block;
+    }
+}
+
+.header--content {
+  width: 85vw;
+  max-width: var(--large3XL);
+  margin: auto;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.header--logo {
+  display: block;
+  width: 100px;
+}
+
+.header--liste{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: center;
+    gap: 50px;
+    text-transform: capitalize;
+}
+
+.header--search{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px var(--c-gray_transparent);
+}
+
+.header--search__input{
+    width: max-content;
+    position: relative;
+}
+
+.header--search__input > * {
+    display: inline-block;
+    padding: 20px;
+}
+
+.header--search__input input{
+    border: none;
+    padding-left: 5px;
+    background: transparent;
+}
+
+.header--search__input input:focus{
+    outline: solid 2px var(--c-main);
+}
+
+.header--search__input input::placeholder{
+    font-size: var(--fs-litle);
+    font-weight: var(--fw-semibold);
+    color: var(--c-black);
+}
+
+.input__resultat-liste{
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    background: var(--c-white);
+    border-radius: 15px;
+    box-shadow: 0 5px 10px var(--c-gray_transparent);
+    line-height: 200%;
+}
+
+.header--search__separation{
+    display: block;
+    height: 37px;
+    width: 1px;
+    background-color: var(--c-gray_transparent);
+}
+
+.header--search__panier{
+    position: relative;
+    margin: 0 25px;
+}
+
+.panier--notif{
+    position: absolute;
+    top: -70%;
+    right: -70%;
+    width: 23px;
+    height: 23px;
+    padding: 3px;
+    border-radius: 100%;
+    background: var(--c-main);
+    box-shadow: 0 0 22px var(--c-main);
+    text-align: center;
+    color: var(--c-white);
+}

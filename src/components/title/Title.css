@@ -1,0 +1,9 @@
+.title {
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 57px;
+}
+
+.subTitle{
+    color: var(--c-main);
+}

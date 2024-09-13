@@ -1,4 +1,4 @@
-import Icon from '../icons/Icon';
+import Icon from '../../components/icons/Icon';
 import './Header.css'
 
 export default function Header() {

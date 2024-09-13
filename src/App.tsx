@@ -1,17 +1,14 @@
 // import { useState } from 'react'
-import Header from './components/header/Header'
+import Header from './sections/header/Header'
+import Reviews from './sections/reviews/Reviews'
 import './main.css'
 
 function App() {
 
-  return (
-    <>
-    {/* <main className='mainbody'> */}
+  return <>
     <Header/>
-      <p>Restaurant FOOD - React</p>
-    {/* </main> */}
-    </>
-  )
+    <Reviews/>
+  </>
 }
 
 export default App

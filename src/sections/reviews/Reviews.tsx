@@ -1,10 +1,11 @@
+import Title from '../../components/title/Title'
 import './Reviews.css'
 
 export default function Reviews() {
 
   return (
     <section>
-      <h2>Review</h2>
+      <Title subTitle='Testimonials'>Our happy client says</Title>
       
     </section>
   )

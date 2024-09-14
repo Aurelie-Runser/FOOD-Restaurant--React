@@ -1,0 +1,25 @@
+.serviceCard{
+    max-width: 500px;
+    padding: 80px 55px;
+    background: var(--c-white);
+    border-radius: 35px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid var(--c-gray);
+    transition: all 0.5s ease-in-out;
+}
+
+.serviceCard:hover {
+    border: transparent 1px solid;
+    box-shadow: 0 2px 30px var(--c-gray_transparent);
+}
+
+.serviceCard--icon{
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.serviceCard p{
+    margin-top: 25px;
+}

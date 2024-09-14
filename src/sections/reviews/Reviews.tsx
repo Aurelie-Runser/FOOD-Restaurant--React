@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 import ReviewsCarrousel from '../../components/reviewsCarrousel/ReviewsCarrousel'
 import Title from '../../components/title/Title'
 

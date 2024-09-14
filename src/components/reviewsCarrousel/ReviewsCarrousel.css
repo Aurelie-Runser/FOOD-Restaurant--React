@@ -1,0 +1,27 @@
+.reviewsCarrousel{
+    position: relative;
+}
+
+.reviewsCarrousel--arrowLeft,
+.reviewsCarrousel--arrowRight{
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    display: block;
+    cursor: pointer;
+}
+
+.reviewsCarrousel--arrowLeft{
+    left: 0;
+    translate: -50% -50%;
+}
+
+.reviewsCarrousel--arrowRight{
+    right: 0;
+    translate: 50% -50%;
+}
+
+.reviewsCarrousel--arrowLeft:hover,
+.reviewsCarrousel--arrowRight:hover{
+    filter: brightness(1.2)
+}

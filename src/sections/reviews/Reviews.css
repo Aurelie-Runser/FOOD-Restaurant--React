@@ -16,6 +16,7 @@
 
 .reviewsCarrousel--arrowLeft,
 .reviewsCarrousel--arrowRight{
+    z-index: 1;
     position: absolute;
     top: 50%;
     display: block;

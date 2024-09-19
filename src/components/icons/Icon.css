@@ -1,5 +1,5 @@
 .icon{
-    display: block;
+    display: inline-block;
     border-radius: 100%;
     stroke: var(--c-black);
     fill: var(--c-black);
@@ -11,52 +11,52 @@
 }
 
 /* taille */
-.small{
+.icon-small{
     height: 20px;
     width: 20px;
 }
 
-.medium{
+.icon-medium{
     height: 42px;
     width: 42px;
     padding: 10px;
 }
 
-.big{
+.icon-big{
     height: 98px;
     width: 98px;
     padding: 23px;
 }
 
 /* couleur */
-.black{
+.icon-black{
     background-color:var(--c-black);
     stroke:var(--c-white);
     fill:var(--c-white);
 }
 
-.white{
+.icon-white{
     background-color:var(--c-white);
 }
 
-.orange{
+.icon-orange{
     background-color:var(--c-main_light);
     stroke:var(--c-main);
     fill:var(--c-main);
 }
 
-.orangeWhite{
+.icon-orangeWhite{
     background-color:var(--c-main);
     stroke:var(--c-white);
     fill:var(--c-white);
 }
 
-.whiteOrange{
+.icon-whiteOrange{
     background-color:var(--c-white);
     stroke:var(--c-main);
     fill:var(--c-main);
 }
 
-.shadow{
+.icon-shadow{
     box-shadow: 0 0 10px var(--c-gray);
 }

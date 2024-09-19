@@ -14,19 +14,19 @@ export default function Icon({name, gauche, size, color, shadow}:iconProps) {
 
     if (gauche) styleIcon = styleIcon + ' gauche'
 
-    if(size == 'medium') styleIcon = styleIcon + ' medium'
-    else if(size == 'big') styleIcon = styleIcon + ' big'
-    else styleIcon = styleIcon + ' small'
+    if(size == 'medium') styleIcon = styleIcon + ' icon-medium'
+    else if(size == 'big') styleIcon = styleIcon + ' icon-big'
+    else styleIcon = styleIcon + ' icon-small'
 
-    if(color == 'black') styleIcon = styleIcon + ' black'
-    else if (color == 'orange') styleIcon = styleIcon + ' orange'
+    if(color == 'black') styleIcon = styleIcon + ' icon-black'
+    else if (color == 'orange') styleIcon = styleIcon + ' icon-orange'
     // icon blanc fond orange
-    else if (color == 'orangeWhite') styleIcon = styleIcon + ' orangeWhite'
+    else if (color == 'orangeWhite') styleIcon = styleIcon + ' icon-orangeWhite'
     // icon orange fond blanc
-    else if (color == 'whiteOrange') styleIcon = styleIcon + ' whiteOrange'
-    else styleIcon = styleIcon + ' white'
+    else if (color == 'whiteOrange') styleIcon = styleIcon + ' icon-whiteOrange'
+    else styleIcon = styleIcon + ' icon-white'
 
-    if (shadow) styleIcon = styleIcon + ' shadow'
+    if (shadow) styleIcon = styleIcon + ' icon-shadow'
 
     const iconChoose = ()=>{
         switch (name) {

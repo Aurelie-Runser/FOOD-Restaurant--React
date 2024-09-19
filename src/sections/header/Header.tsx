@@ -11,7 +11,7 @@ export default function Header() {
   ]
 
   return (
-    <header>
+    <header className='header'>
       <div className='header--content'>
         <img className='header--logo' src="/img/Logo.png" alt="Logo du restaurant FOOD" />
 

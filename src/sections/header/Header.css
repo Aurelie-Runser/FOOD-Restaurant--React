@@ -1,15 +1,15 @@
-header {
+.header {
     display: none;
     z-index: 50;
     position: sticky;
     top: 0;
-    width: 100%;
+    width: 100vw;
     margin-top: 15px;
     background: var(--c-white);
 }
 
 @media screen and (min-width: 1024px) {
-    header{
+    .header{
         display: block;
     }
 }
@@ -37,6 +37,7 @@ header {
     justify-content: center;
     gap: 50px;
     text-transform: capitalize;
+    color: var(--c-black);
 }
 
 .header--search{

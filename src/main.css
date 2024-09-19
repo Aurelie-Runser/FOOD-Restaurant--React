@@ -13,8 +13,6 @@ body{
 
 #root {
     margin: 15px auto;
-    width: 85vw;
-    max-width: 1605px;
     min-height: 100vh;
     color: var(--c-black);
     font-family: var(--ff-Montserrat);
@@ -22,6 +20,8 @@ body{
   
 section{
     margin: 135px auto;
+    width: 85vw;
+    max-width: 1605px;
 }
 
 h1,

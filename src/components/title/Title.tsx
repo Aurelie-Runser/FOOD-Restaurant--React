@@ -3,9 +3,9 @@ import './Title.css'
 
 export default function Title({children, subTitle}:{ children: ReactNode, subTitle: string }) {
   return (
-    <section className='title'>
+    <div className='title'>
       <h2 className='p-small subTitle'>{ subTitle }</h2>
       <h3>{ children }</h3>
-    </section>
+    </div>
   )
 }

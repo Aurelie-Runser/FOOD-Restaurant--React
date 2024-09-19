@@ -1,25 +1,25 @@
-import { ReactNode } from 'react';
 import Icon from '../icons/Icon';
 import Bouton from '../bouton/Bouton';
 
 import './ProductCard.css'
 
 interface ProductCard {
-    children: ReactNode,
-    icon: string,
-    title: string,
+    name: string,
+    img: string,
+    price: number,
+    note: number,
 }
 
-export default function ProductCard({children, icon, title}:ServiceCard) {
+export default function ProductCard({name, img, price, note}:ProductCard) {
   return (
     <div className='productCard'>
       <div className="productCard--img">
-        <img src="/img/Pizza.jpg" alt="" />
+        <img src={"/img/"+img+".jpg"} alt="" />
       </div>
 
       <div className="productCard--content">
       <div className="productCard--left">
-        <h4>Pizza</h4>
+        <h4>{ name }</h4>
 
         <div className='productCard--left__buttons'>
             <Bouton size='small'>Add to Cart</Bouton>
@@ -31,9 +31,9 @@ export default function ProductCard({children, icon, title}:ServiceCard) {
       <div className="productCard__right">
         <div className='productCard__right--note p-small'>
             <Icon name='etoile' color='whiteOrange'/>
-            <span>5</span>
+            <span>{ note }</span>
         </div>
-        <span className='productCard__right--price h5'>$ 25.50</span>
+        <span className='productCard__right--price h5'>$ { price }</span>
       </div>
       </div>
     </div>

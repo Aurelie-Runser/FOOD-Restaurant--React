@@ -4,14 +4,14 @@ import Infos from './components/infos/Infos'
 import Services from './sections/services/Services'
 import Reviews from './sections/reviews/Reviews'
 import './main.css'
-import ProductCard from './components/productCard/ProductCard'
+import GridCard from './components/gridCard/GridCard'
 
 function App() {
 
   return <>
     <Header/>
     <Infos/>
-    <ProductCard/>
+    <GridCard num='1'/>
     <Services/>
     <Reviews/>
   </>

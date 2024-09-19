@@ -1,0 +1,19 @@
+.gridCard {
+    display: grid;
+    justify-items: center;
+    align-items: stretch;
+    grid-template-rows: 1fr; 
+    margin: auto;  
+}
+
+.gridCard--product {
+  max-width: var(--large3XL);
+  grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+  gap: 50px;
+}
+
+.gridCard-hero {
+  max-width: var(--small);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 50px 10px;
+}

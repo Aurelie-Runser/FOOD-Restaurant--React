@@ -115,7 +115,7 @@ const listProduct = [
     },
 ]
 
-export default function GridCard({num}:{ num: number}) {
+export default function GridCard({num}:{ num: number|undefined}) {
   return (
     <ul className='gridCard gridCard--product'>
       {listProduct.map((p) => (

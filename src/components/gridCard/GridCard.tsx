@@ -127,7 +127,7 @@ export default function GridCard({num}:{ num: number|undefined}) {
                 price={p.price}
             />
         </li>
-      ))}
+      )).slice(0, num)}
     </ul>
   )
 }

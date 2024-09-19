@@ -1,0 +1,28 @@
+.bouton{
+    background-color: var(--c-main);
+    border: none;
+    border-radius: 15px;
+    display: inline-block;
+    color: var(--c-white);
+    text-decoration: none;
+    text-transform: capitalize;
+    width: fit-content;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+.bouton-rounded {
+    border-radius: 50px;
+}
+
+.bouton-small {
+    padding: 14px 29px;
+}
+
+.bouton-big {
+    padding: 33px 67px;
+}
+
+.bouton:hover{
+    filter: brightness(1.2);
+}

@@ -7,10 +7,13 @@ Liste des tâches :
     - [ ] barre de recherche fonctionnel
   - [ ] footer
   - [ ] hero
+    - [X] composant card small
   - [X] section Information
   - [X] section Products
+    - [X] composant card produit
     - [X] rendre la liste des produits dinamique avec un bouton +/- de produits
   - [X] section Services
+      - [X] composant card service
   - [ ] section How to work
   - [X] section Testimonials
     - [X] carrousel de plusieurs avis

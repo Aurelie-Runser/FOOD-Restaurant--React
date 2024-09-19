@@ -1,14 +1,21 @@
+import { useState } from 'react'
+
 import Title from '../../components/title/Title'
 import GridCard from '../../components/gridCard/GridCard'
 import Bouton from '../../components/bouton/Bouton'
 import Icon from '../../components/icons/Icon'
 
 import './Products.css'
-import { useState } from 'react'
 
 export default function Products() {
 
+  const [showButton, setShowButton] = useState(true)
   const [numProduct, setNumProduct] = useState(3)
+
+  const moreProducts = ()=>{
+    setNumProduct(6)
+    setShowButton(false)   
+  }
 
   return (
     <section className='products'>
@@ -16,12 +23,14 @@ export default function Products() {
       
       <GridCard num={numProduct}/>
 
-      <div className='products--button'>
-        <Bouton size='big' rounded icon>
-          See More Products
-          <Icon name='chevron' size="medium" color='whiteOrange'/>
-        </Bouton>
-      </div>
+      { showButton &&
+        <div className='products--button' onClick={moreProducts}>
+          <Bouton size='big' rounded icon>
+            See More Products
+            <Icon name='chevron' size="medium" color='whiteOrange'/>
+          </Bouton>
+        </div>
+      }
     </section>
   )
 }

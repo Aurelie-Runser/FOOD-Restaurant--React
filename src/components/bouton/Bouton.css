@@ -23,6 +23,14 @@
     padding: 33px 67px;
 }
 
+.bouton-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
 .bouton:hover{
     filter: brightness(1.2);
 }

@@ -4,6 +4,8 @@ import Infos from './components/infos/Infos'
 import Products from './sections/products/Products'
 import Services from './sections/services/Services'
 import Reviews from './sections/reviews/Reviews'
+import Subscribe from './sections/subscribe/Subscribe'
+
 import './main.css'
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
     <Products/>
     <Services/>
     <Reviews/>
+    <Subscribe/>
   </>
 }
 

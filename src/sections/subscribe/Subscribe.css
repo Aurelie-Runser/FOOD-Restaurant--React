@@ -1,0 +1,30 @@
+.subscribe{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 74px 50px;
+    width: 85vw;
+    max-width: var(--large4XL);
+    height: 300px;
+    border-radius: 50px;
+    background-color: var(--c-black);
+}
+
+.subscribe img {
+    /* display: none; */
+    flex: none;
+    width: 38%;
+    /* @include xx-large-up {
+      display: block;
+    } */
+}
+
+.subscribe--content {
+    flex: none;
+    color: var(--c-white);
+    max-width: 46%;
+}
+
+.subscribe--content p{
+    margin: 15px 0;
+}

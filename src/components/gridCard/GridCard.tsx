@@ -119,8 +119,8 @@ export default function GridCard({num}:{ num: number|undefined}) {
   return (
     <ul className='gridCard gridCard--product'>
       {listProduct.map((p) => (
-        <li>
-            <ProductCard
+        <li key={p.img}>
+            <ProductCard 
                 name={p.name}
                 img={p.img}
                 note={p.note}

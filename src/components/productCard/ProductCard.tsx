@@ -14,7 +14,7 @@ export default function ProductCard({name, img, price, note}:ProductCard) {
   return (
     <div className='productCard'>
       <div className="productCard--img">
-        <img src={"/img/"+img+".jpg"} alt="" />
+        <img src={"/img/"+img} alt="" />
       </div>
 
       <div className="productCard--content">

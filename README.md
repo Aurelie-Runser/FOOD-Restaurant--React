@@ -12,6 +12,7 @@ Liste des tâches :
   - [X] section Products
     - [X] composant card produit
     - [X] rendre la liste des produits dinamique avec un bouton +/- de produits
+    - [X] utiliser l'api de recette avec Fetch pour afficher les produits
   - [X] section Services
       - [X] composant card service
   - [ ] section How to work

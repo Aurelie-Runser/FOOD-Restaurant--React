@@ -17,3 +17,9 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 50px 10px;
 }
+
+.gridCard--error{
+  color: red;
+  font-style: italic;
+  text-align: center;
+}

@@ -44,8 +44,8 @@ export default function FooterCol({ logo, title, liens, texte, icons, email }:Fo
       {icons && (
         <div className="footer--iconsList">
           {icons.map((icon:string, index:number) => (
-            <div className='footer--icon'>
-              <Icon key={index} name={icon} size="medium" color="orange" />
+            <div key={index}  className='footer--icon'>
+              <Icon name={icon} size="medium" color="orange" />
             </div>
           ))}
         </div>

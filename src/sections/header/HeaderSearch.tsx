@@ -31,7 +31,7 @@ export default function Header() {
                 }
 
                 {ProductsResulte.length==0 && <p className='header--search__input-noResult'>Aucune recette ne correspond à votre recherche.</p>}
-                {errors && <p className='header--search__input-noResult'>Une erreur est survenu lors de la récupération des recetttes.</p>}
+                {errors && <p className='header--search__input-noResult' style={{color: 'red'}}>Une erreur est survenue lors de la récupération des recettes.</p>}
             </ul>}
         </div>
 

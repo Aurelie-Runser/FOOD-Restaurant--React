@@ -25,7 +25,7 @@ export default function Header() {
                 {ProductsResulte
                     .map((d) => (
                         <li key={d.id} className="header--search__input-item">
-                            <a href={`/recettes/${d.recipe_id}`}>{d.title}</a> {/* Ajout d'un lien autour du titre */}
+                            <a href={`/recettes/${d.imgSrc}`}>{d.title}</a>
                         </li>
                     ))
                 }

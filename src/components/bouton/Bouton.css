@@ -9,6 +9,7 @@
     width: fit-content;
     word-wrap: break-word;
     cursor: pointer;
+    transition: all .15s ease-in-out;
 }
 
 .bouton-rounded {
@@ -21,6 +22,7 @@
 
 .bouton-big {
     padding: 33px 67px;
+    background: linear-gradient(#f8b471, var(--c-main));
 }
 
 .bouton-icon {

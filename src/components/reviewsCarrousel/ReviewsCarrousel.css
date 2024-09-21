@@ -9,6 +9,7 @@
     top: 50%;
     display: block;
     cursor: pointer;
+    transition: all .15s ease-in-out;
 }
 
 .reviewsCarrousel--arrowLeft{

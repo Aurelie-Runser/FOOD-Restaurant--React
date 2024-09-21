@@ -57,7 +57,6 @@ h5,
 .h5{
     font-size: var(--fs-litle);
     font-weight: var(--fw-semibold);
-    
 }
 
 p,
@@ -72,10 +71,10 @@ p,
     font-weight: var(--fw-regular);
 }
 
-a:hover {
-    color: var(--c-main);
+a{
+    transition: all .15s ease-in-out;
 }
 
-ul{
-
+a:hover {
+    color: var(--c-main);
 }

@@ -33,4 +33,5 @@
 
 .bouton:hover{
     filter: brightness(1.2);
+    color: var(--c-white);
 }

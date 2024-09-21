@@ -13,6 +13,11 @@ export function useAllProducts(){
                 'Accept': 'application/json; charset=UTF-8',
               }
             }).then((res) => res.json()).then(data => {
+                data = data.map((d) => ({
+                    ...d, // pour garder toutes les propriétés et non uniquement 'prix'
+                    note: d.note.toFixed(1),
+                    prix: d.prix.toFixed(2)
+                }))
                 setData(data)
             }).catch((e) => {
                 setErrors(e)

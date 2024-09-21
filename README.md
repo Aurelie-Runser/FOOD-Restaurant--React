@@ -7,7 +7,7 @@ Liste des tâches :
     - [X] barre de recherche fonctionnel
   - [X] footer
   - [ ] hero
-    - [X] composant card small
+    - [ ] composant card small
   - [X] section Information
   - [X] section Products
     - [X] composant card produit

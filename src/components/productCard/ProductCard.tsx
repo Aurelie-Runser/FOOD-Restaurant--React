@@ -4,13 +4,13 @@ import Bouton from '../bouton/Bouton';
 import './ProductCard.css'
 
 interface ProductCard {
-    name: string,
+    title: string,
     img: string,
     price: number,
     note: number,
 }
 
-export default function ProductCard({name, img, price, note}:ProductCard) {
+export default function ProductCard({title, img, price, note}:ProductCard) {
   return (
     <div className='productCard'>
       <div className="productCard--img">
@@ -19,7 +19,7 @@ export default function ProductCard({name, img, price, note}:ProductCard) {
 
       <div className="productCard--content">
       <div className="productCard--left">
-        <h4>{ name }</h4>
+        <h4>{ title }</h4>
 
         <div className='productCard--left__buttons'>
             <Bouton size='small'>Add to Cart</Bouton>

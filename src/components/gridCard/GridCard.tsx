@@ -1,4 +1,4 @@
-import { useFetch } from '../../hooks/useFetch'
+import { useAllProducts  } from '../../hooks/useAllProducts'
 import ProductCard from '../productCard/ProductCard'
 import './GridCard.css'
 
@@ -118,7 +118,7 @@ import './GridCard.css'
 
 export default function GridCard({num}:{ num: number|undefined}) {
 
-  const { loading, data, errors } = useFetch();
+  const { loading, data, errors } = useAllProducts  ();
   // console.log(loading)
   // console.log(data)
   // console.log(errors)
@@ -130,7 +130,7 @@ export default function GridCard({num}:{ num: number|undefined}) {
         {data.map((p) => (
             <li key={p.title}>
                 <ProductCard 
-                    name={p.title}
+                    title={p.title}
                     img={p.imgSrc}
                     note={p.note}
                     price={p.prix}

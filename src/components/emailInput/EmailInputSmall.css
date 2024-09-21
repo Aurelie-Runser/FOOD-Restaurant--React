@@ -1,0 +1,23 @@
+.emailInput-small{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    background: var(--c-white);
+    padding: 8px 10px;
+    border-radius: 32.5px;
+    box-shadow: 0 0 15px var(--c-gray20);
+}
+
+.emailInput-small--input{
+    border: none;
+    width: 200px;
+}
+
+.emailInput-small--input:focus{
+    outline: none;
+}
+
+.emailInput-small--input::placeholder{
+    color: #646464;
+}

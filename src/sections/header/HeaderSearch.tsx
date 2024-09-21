@@ -16,7 +16,7 @@ export default function Header() {
             <div>
                 <Icon name='loupe'/>
             </div>
-            <input className='p' type="text" size={15} placeholder="Search" value={productSearch} onChange={(e) => setProductSearch(e.target.value)}/>
+            <input className='p' type="text" size={15} placeholder="Search" value={productSearch} onChange={(e) => setProductSearch(e.target.value)} onBlur={() => setProductSearch("")}/>
 
             {/* Liste des recettes correspondant à la recherche de l'utilisateur */}
             {productSearch && <ul className="header--search__input-liste">

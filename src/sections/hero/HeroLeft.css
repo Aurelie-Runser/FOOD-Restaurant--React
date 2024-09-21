@@ -1,0 +1,61 @@
+.hero--left {
+    min-width: min-content;
+    max-width: 630px;
+    width: 48%;
+}
+
+.hero--left__bike{
+    width: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 30px;
+    background: var(--c-main_light);
+}
+
+.hero--left__bike img {
+    width: 54px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.hero--left__bike span {
+    color: var(--c-main);
+    margin-left: 25px;
+}
+
+.hero--left__title {
+    margin: 70px 0 50px 0;
+}
+
+.hero--left__title span {
+    color: var(--c-main);
+}
+
+.hero--left__buttons{
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero--left__buttons > * {
+    flex: none;
+}
+
+.hero--left__buttons-play{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.hero--left__buttons-play:hover{
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}

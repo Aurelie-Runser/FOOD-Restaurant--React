@@ -18,7 +18,8 @@ body{
     font-family: var(--ff-Montserrat);
 }
   
-section{
+section,
+.section{
     margin: 135px auto;
     width: 85vw;
     max-width: 1605px;
@@ -28,6 +29,7 @@ h1,
 .h1{
     font-size: var(--fs-extra);
     font-weight: var(--fw-bold);
+    line-height: 1.25;
     text-transform: capitalize;
 }
 

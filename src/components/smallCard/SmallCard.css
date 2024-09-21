@@ -1,0 +1,74 @@
+.smallCard{
+    position: relative;
+    max-width: 250px;
+    min-width: 200px;
+    aspect-ratio: 2/3;
+    z-index: 0;
+}
+
+.smallCard--bg{
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    display: grid;
+    place-items: end;
+    width: 100%;
+    height: 80%;
+    background: var(--c-white);
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 0px var(--c-gray50)
+}
+
+.smallCard--content{
+    text-align: center;
+    margin: 15% auto;
+}
+
+.smallCard--content > * + *{
+    margin: 11px;
+}
+
+.smallCard--text{
+    text-transform: capitalize;
+}
+
+.smallCard--price::before{
+    content: "$ ";
+    color: #d92f26;
+}
+
+.smallCard--buttons{
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+}
+
+.smallCard--img{
+    width: 90%;
+    margin: auto;
+    object-fit: contain;
+    overflow: hidden;
+    filter: drop-shadow(0 8px 8px var(--c-grayEE));
+}
+
+.smallCard:hover .smallCard--img{
+    animation: animImg 2s 0s linear infinite;
+}
+
+@keyframes animImg {
+    0% {
+        transform: rotate(0deg);
+    }
+  
+    25% {
+        transform: rotate(10deg);
+    }
+  
+    75% {
+        transform: rotate(-10deg);
+    }
+}

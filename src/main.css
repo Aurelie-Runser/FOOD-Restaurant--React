@@ -28,6 +28,7 @@ h1,
 .h1{
     font-size: var(--fs-extra);
     font-weight: var(--fw-bold);
+    text-transform: capitalize;
 }
 
 h2,

@@ -15,7 +15,6 @@ Liste des tâches :
     - [X] utiliser l'api de recette avec Fetch pour afficher les produits
   - [X] section Services
       - [X] composant card service
-  - [ ] section How to work
   - [X] section Testimonials
     - [X] carrousel de plusieurs avis
   - [X] section Subscribe

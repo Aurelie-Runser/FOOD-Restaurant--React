@@ -4,7 +4,7 @@ Projet personnel de refonte d'un projet existant afin d'apprendre **React.js** e
 
 Liste des tâches :
   - [X] header
-    - [ ] barre de recherche fonctionnel
+    - [X] barre de recherche fonctionnel
   - [ ] footer
   - [ ] hero
     - [X] composant card small

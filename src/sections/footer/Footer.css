@@ -1,0 +1,56 @@
+.footer {
+    display: none;
+    width: 100%;
+    height: fit-content;
+    padding: 57px 0;
+    background: var(--c-gray20);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+    .footer{
+        display: flex;
+    }
+}
+
+.footerCol {
+    width: fit-content;
+    max-width: 380px;
+    height: fit-content;  
+}
+
+.footerCol--logo {
+  width: 180px;
+  margin-bottom: 30px;
+}
+
+.footerCol--title {
+  margin-bottom: 68px;
+}
+
+.footer--nav,
+.footer--texte {
+  color: #838383;
+}   
+
+.footer--item {
+  line-height: 1.75;
+}
+
+.footer--iconsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 20px 0;
+}
+
+.footer--icon:hover{
+    cursor: pointer;
+    filter: saturate(3)
+}
+
+.footer--email {
+  margin-top: 30px;
+}

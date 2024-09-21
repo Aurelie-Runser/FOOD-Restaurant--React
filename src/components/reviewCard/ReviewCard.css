@@ -9,7 +9,7 @@
     border-radius: 35px;
     padding: 100px 20px;
     aspect-ratio: 2/1;
-    box-shadow: 0px 0px 30px 0px var(--c-gray_transparent);
+    box-shadow: 0px 0px 30px 0px var(--c-gray50);
 }
 
 .reviewsCard--writer {

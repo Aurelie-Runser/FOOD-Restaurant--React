@@ -6,7 +6,9 @@
     --c-white: #fdfcfc;
     --c-black: #141414;
     --c-gray: #B6B6B6;
-    --c-gray_transparent: #B6B6B650;
+    --c-gray20: #B6B6B620;
+    --c-gray50: #B6B6B650;
+    --c-grayEE: #B6B6B6EE;
 
     --fs-small: .8rem;
     --fs-litle: 1.1rem;

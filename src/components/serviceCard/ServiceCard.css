@@ -11,7 +11,7 @@
 
 .serviceCard:hover {
     border: transparent 1px solid;
-    box-shadow: 0 2px 30px var(--c-gray_transparent);
+    box-shadow: 0 2px 30px var(--c-gray50);
 }
 
 .serviceCard--icon{

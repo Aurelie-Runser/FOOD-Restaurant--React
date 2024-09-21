@@ -5,7 +5,7 @@
     border-radius: 35px;
     background: var(--c-white);
     overflow: hidden;
-    box-shadow: 0 2px 30px var(--c-gray_transparent);
+    box-shadow: 0 2px 30px var(--c-gray50);
 }
 
 .productCard--img {

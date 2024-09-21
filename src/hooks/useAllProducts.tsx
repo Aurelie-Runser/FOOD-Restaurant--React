@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export function useFetch(){
+export function useAllProducts(){
 
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState(null)

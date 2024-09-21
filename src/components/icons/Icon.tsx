@@ -2,10 +2,10 @@ import './Icon.css'
 
 interface iconProps {
     name: string,
-    gauche: boolean | null,
-    size: string | null,
-    color: string | null,
-    shadow: boolean | null,
+    gauche?: boolean,
+    size?: string,
+    color?: string,
+    shadow?: boolean
 }
 
 export default function Icon({name, gauche, size, color, shadow}:iconProps) {

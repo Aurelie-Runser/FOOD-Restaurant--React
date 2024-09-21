@@ -1,6 +1,6 @@
 import './EmailInput.css'
 
-export default function EmailInput({size}:{size: string|undefined}) {
+export default function EmailInput({size}:{size?: string}) {
 
     const formSubmit = (e:any)=>{
         e.preventDefault()

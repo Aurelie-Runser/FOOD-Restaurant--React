@@ -116,7 +116,7 @@ import './GridCard.css'
 //     },
 // ]
 
-export default function GridCard({num}:{ num: number|undefined}) {
+export default function GridCard({num}:{ num?: number}) {
 
   const { loading, data, errors } = useAllProducts  ();
   // console.log(loading)

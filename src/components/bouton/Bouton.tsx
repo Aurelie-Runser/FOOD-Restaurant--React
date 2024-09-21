@@ -4,10 +4,10 @@ import './Bouton.css'
 
 interface Bouton {
     children: ReactNode,
-    size: string | undefined,
-    rounded: boolean | undefined
-    link: string | undefined
-    icon: boolean | undefined
+    size?: string,
+    rounded?: boolean,
+    link?: string,
+    icon?: boolean
 }
 
 export default function Bouton({children, size, rounded, link, icon}:Bouton) {

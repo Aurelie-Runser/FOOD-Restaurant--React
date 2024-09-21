@@ -1,0 +1,28 @@
+.hero--right{
+    position: relative;
+    min-width: min-content;
+    max-width: 600px;
+    width: 40%;
+    height: fit-content;
+    padding: 50px 40px 60px 0;
+}
+
+.hero--right__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(25deg, transparent, var(--c-gray50));
+    border-radius: 30px;
+    width: 77%;
+    height: 100%;
+}
+
+.hero--right__grid{
+    display: grid;
+    justify-items: center;
+    align-items: stretch;
+    grid-template-rows: 1fr;
+    max-width: var(--small);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px 10px;  
+}

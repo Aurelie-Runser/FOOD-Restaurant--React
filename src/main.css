@@ -12,7 +12,7 @@ body{
 }
 
 #root {
-    margin: 15px auto;
+    margin: 15px auto 0 auto;
     min-height: 100vh;
     color: var(--c-black);
     font-family: var(--ff-Montserrat);
@@ -71,4 +71,8 @@ p,
 
 a:hover {
     color: var(--c-main);
-  }
+}
+
+ul{
+
+}

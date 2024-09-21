@@ -76,7 +76,7 @@
     color: var(--c-black);
 }
 
-.input__resultat-liste{
+.header--search__input-liste{
     position: absolute;
     top: 110%;
     left: 0;
@@ -85,6 +85,19 @@
     border-radius: 15px;
     box-shadow: 0 5px 10px var(--c-gray_transparent);
     line-height: 200%;
+    font-size: var(--fs-litle);
+    font-weight: var(--fw-medium);
+}
+
+.header--search__input-loading{
+    color: var(--c-main);
+    font-style: italic;
+}
+
+.header--search__input-noResult{
+    color: #B6B6B6EE;
+    font-size: var(--fs-small);
+    font-style: italic;
 }
 
 .header--search__separation{

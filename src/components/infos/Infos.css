@@ -6,7 +6,7 @@
     max-width: var(--large4XL); */
     height: 250px;
     border-radius: 50px;
-    box-shadow: 0px 0px 25px 0px var(--c-gray50); 
+    box-shadow: 0px 0px 30px 5px var(--c-gray20); 
 }
 
 .infos--section {

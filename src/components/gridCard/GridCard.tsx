@@ -150,8 +150,9 @@ export default function GridCard({num}:{ num?: number}) {
     { data &&
         <ul className='gridCard gridCard--product'>
         {data.map((p) => (
-            <li key={p.title}>
+            <li key={p.recipe_id}>
                 <ProductCard 
+                    id={p.recipe_id}
                     title={p.title}
                     img={p.imgSrc}
                     note={p.note}

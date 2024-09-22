@@ -3,14 +3,15 @@ import { ReactNode } from 'react';
 import './Bouton.css'
 
 interface Bouton {
-    children: ReactNode,
-    size?: string,
-    rounded?: boolean,
-    link?: string,
-    icon?: boolean
+    children: ReactNode;
+    size?: string;
+    rounded?: boolean;
+    link?: string;
+    icon?: boolean;
+    action?: () => void
 }
 
-export default function Bouton({children, size, rounded, link, icon}:Bouton) {
+export default function Bouton({children, size, rounded, link, icon, action}:Bouton) {
     let boutonClass = 'bouton'
 
     if(rounded) boutonClass += ' bouton-rounded'
@@ -25,7 +26,7 @@ export default function Bouton({children, size, rounded, link, icon}:Bouton) {
             {children}
         </a>
     ) : (
-        <button className={boutonClass} >
+        <button className={boutonClass} onClick={action}>
             {children}
         </button>
     )

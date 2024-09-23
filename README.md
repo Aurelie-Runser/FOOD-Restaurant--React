@@ -18,7 +18,7 @@ Liste des tâches :
   - [X] section Testimonials
     - [X] carrousel de plusieurs avis
   - [X] section Subscribe
-    - [ ] notification si inscrit
+    - [X] notification si inscrit
   - [ ] page d'un produit
   - [ ] page du panier
   - [ ] système de panier

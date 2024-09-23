@@ -71,6 +71,11 @@ p,
     font-weight: var(--fw-regular);
 }
 
+strong{
+    color: var(--c-main);
+    font-weight: var(--fw-bold);
+}
+
 a{
     transition: all .15s ease-in-out;
 }

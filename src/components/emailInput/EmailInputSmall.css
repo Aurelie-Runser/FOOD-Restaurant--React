@@ -21,3 +21,8 @@
 .emailInput-small--input::placeholder{
     color: #646464;
 }
+
+.emailInput-small--button:hover{
+    cursor: pointer;
+    filter: brightness(1.2);
+}

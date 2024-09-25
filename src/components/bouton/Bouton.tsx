@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 import './Bouton.css'
+import { NavLink } from 'react-router-dom';
 
 interface Bouton {
     children: ReactNode;
@@ -22,9 +23,9 @@ export default function Bouton({children, size, rounded, link, icon, action}:Bou
     if(icon) boutonClass += ' bouton-icon'
     
     return link ? (
-        <a href={link} className={boutonClass}>
+        <NavLink to={link} className={boutonClass}>
             {children}
-        </a>
+        </NavLink>
     ) : (
         <button className={boutonClass} onClick={action}>
             {children}

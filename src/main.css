@@ -80,6 +80,7 @@ a{
     transition: all .15s ease-in-out;
 }
 
-a:hover {
+a:hover,
+a.active {
     color: var(--c-main);
 }

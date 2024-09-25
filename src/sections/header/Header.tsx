@@ -1,4 +1,5 @@
 import HeaderSearch from './HeaderSearch'
+import { NavLink } from 'react-router-dom'
 import './Header.css'
 
 export default function Header() {
@@ -7,7 +8,7 @@ export default function Header() {
     ["home", "/"],
     ["menu", "/recettes"],
     ["service", "/#services"],
-    ["shope", "/"]
+    ["shope", "/#shope"]
   ]
 
   return (
@@ -19,9 +20,9 @@ export default function Header() {
           <ul className='h5 header--liste'>
             {links.map(item => (
               <li key={item[0]}>
-                <a href={item[1]}>
+                <NavLink to={item[1]} end>
                   {item[0]}
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>

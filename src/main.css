@@ -18,11 +18,16 @@ body{
     font-family: var(--ff-Montserrat);
 }
   
+main{
+    margin: 30px auto;
+    width: 85vw;
+    max-width: 1605px;
+}
+  
 section,
 .section{
     margin: 135px auto;
-    width: 85vw;
-    max-width: 1605px;
+    width: 100%;
 }
 
 h1,

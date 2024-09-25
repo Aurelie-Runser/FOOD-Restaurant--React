@@ -1,7 +1,5 @@
 .hero{
-    margin: 30px auto 135px auto;
-    width: 85vw;
-    max-width: 1605px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;

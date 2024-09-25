@@ -1,8 +1,10 @@
-// import { useState } from 'react'
+import GridCard from "../components/gridCard/GridCard";
 
 export default function Recettes() {
 
   return <>
-    <h1>Liste de recettes</h1>
+    <h1 className="page--title">Liste de recettes</h1>
+    
+    <GridCard/>
   </>
 }

@@ -9,6 +9,7 @@ import Error from './pages/Error'
 
 import './main.css'
 import Chargement from './components/Chargement'
+import ScrollToHash from './hooks/scrollToHash'
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,7 @@ function Layout(){
   const {state} = useNavigation()
   return <>
     <Header/>
+    <ScrollToHash/>
     <main>
       {state != 'loading' && <Outlet/>}
       {state == 'loading' && <Chargement/>}

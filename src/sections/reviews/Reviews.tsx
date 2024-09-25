@@ -6,7 +6,7 @@ import './Reviews.css'
 export default function Reviews() {
 
   return (
-    <section className='reviews'>
+    <section id='reviews' className='reviews'>
       <Title subTitle='Testimonials'>Our happy client says</Title>
       
       <div className='reviews--content'>

@@ -24,7 +24,7 @@ export default function Services() {
     ]
 
   return (
-    <section className='services'>
+    <section id='services' className='services'>
       <Title subTitle='Services'>Why choose our favorite food</Title>
       
       <ul className='services--content'>

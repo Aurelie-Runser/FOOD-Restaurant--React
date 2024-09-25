@@ -5,7 +5,7 @@ import './Subscribe.css'
 export default function Subscribe() {
 
   return (
-    <section className='subscribe'>
+    <section id='subscribe' className='subscribe'>
         <img src="/img/Burger.png" alt="photo d'un burger" />
 
         <div className='subscribe--content'>

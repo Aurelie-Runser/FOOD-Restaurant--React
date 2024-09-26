@@ -1,0 +1,14 @@
+.recette--img{
+    width: 40vw;
+    max-width: var(--medium);
+    margin: 0;
+}
+
+.recette--img img{
+    position: sticky;
+    top: 25%;
+    width: 90%;
+    margin: 5% 0;
+    border-radius: 30px;
+    box-shadow: 0 0 15px 5px var(--c-gray50);
+}

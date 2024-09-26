@@ -1,0 +1,18 @@
+.recette--donnees__ingredients {
+    margin: 60px 0;
+}
+
+.ingredients__liste {
+    text-align: left;
+}
+
+.ingredients__liste thead tr th{
+    min-width: 150px;
+    padding: 5px 0;
+    color: var(--c-main);
+    font-weight: var(--fw-medium);
+}
+
+.ingredients__liste tbody tr th{
+    padding: 5px 0;
+}

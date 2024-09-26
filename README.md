@@ -21,6 +21,6 @@ Liste des tâches :
     - [X] notification si inscrit
   - [X] page liste de tous les produits
     - [ ] filtres pour la liste de produits
-  - [ ] page d'un produit
+  - [X] page d'un produit
   - [ ] page du panier
   - [ ] système de panier

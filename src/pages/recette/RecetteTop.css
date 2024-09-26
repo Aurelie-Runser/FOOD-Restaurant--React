@@ -1,0 +1,19 @@
+.recette--donnees__rapide{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.rapide--info{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.info__note{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}

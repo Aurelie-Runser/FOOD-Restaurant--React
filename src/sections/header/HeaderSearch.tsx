@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useAllProductsName } from '../../hooks/useAllProductsName';
 import Icon from '../../components/icons/Icon';
 import './Header.css'
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
 
@@ -11,12 +12,19 @@ export default function Header() {
 
     const ProductsResulte = data?.filter((d) => d.title.toLowerCase().includes(productSearch.toLowerCase()))
 
+    // fonction pour ajouter un delai avant de cacher la liste de recette, afni de pouvoir cliquer dessus
+    const onBlurProductSearch = ()=>{
+        setTimeout(() => {
+            setProductSearch('');
+        }, 500);
+    };
+
     return <div className='header--search'>
         <div className='header--search__input'>
             <div>
                 <Icon name='loupe'/>
             </div>
-            <input className='p' type="text" size={15} placeholder="Search" value={productSearch} onChange={(e) => setProductSearch(e.target.value)} onBlur={() => setProductSearch("")}/>
+            <input className='p' type="text" size={15} placeholder="Search" value={productSearch} onChange={(e) => setProductSearch(e.target.value)} onBlur={onBlurProductSearch}/>
 
             {/* Liste des recettes correspondant à la recherche de l'utilisateur */}
             {productSearch && <ul className="header--search__input-liste">
@@ -25,7 +33,7 @@ export default function Header() {
                 {ProductsResulte
                     .map((d) => (
                         <li key={d.id} className="header--search__input-item">
-                            <a href={`/recettes/${d.imgSrc}`}>{d.title}</a>
+                            <NavLink to={`/recettes/${d.imgSrc}`}>{d.title}</NavLink>
                         </li>
                     ))
                 }

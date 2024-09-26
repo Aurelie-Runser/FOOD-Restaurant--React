@@ -23,7 +23,7 @@ export default function Bouton({children, size, rounded, link, icon, action}:Bou
     if(icon) boutonClass += ' bouton-icon'
     
     return link ? (
-        <NavLink to={link} className={boutonClass}>
+        <NavLink to={link} className={boutonClass} end>
             {children}
         </NavLink>
     ) : (

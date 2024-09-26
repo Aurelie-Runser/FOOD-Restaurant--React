@@ -33,7 +33,7 @@ export default function Header() {
                 {ProductsResulte
                     .map((d) => (
                         <li key={d.id} className="header--search__input-item">
-                            <NavLink to={`/recettes/${d.imgSrc}`}>{d.title}</NavLink>
+                            <NavLink to={`/recettes/${d.recipe_id}`}>{d.title}</NavLink>
                         </li>
                     ))
                 }

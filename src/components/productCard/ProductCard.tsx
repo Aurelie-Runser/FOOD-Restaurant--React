@@ -4,13 +4,14 @@ import Bouton from '../bouton/Bouton';
 import './ProductCard.css'
 
 interface ProductCard {
+    id: number,
     title: string,
     img: string,
     price: number,
     note: number,
 }
 
-export default function ProductCard({title, img, price, note}:ProductCard) {
+export default function ProductCard({id, title, img, price, note}:ProductCard) {
   return (
     <div className='productCard'>
       <div className="productCard--img">
@@ -24,7 +25,7 @@ export default function ProductCard({title, img, price, note}:ProductCard) {
         <div className='productCard--left__buttons'>
             <Bouton size='small'>Add to Cart</Bouton>
             {/* <Bouton size='small'>Remove to Cart</Bouton> */}
-            <Bouton rounded link={'/recettes/'+img}><Icon name='eye' size='medium' color='orangeWhite'/></Bouton>
+            <Bouton rounded link={'/recettes/'+id}><Icon name='eye' size='medium' color='orangeWhite'/></Bouton>
         </div>
       </div>
 

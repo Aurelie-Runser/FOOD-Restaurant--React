@@ -134,7 +134,7 @@ export default function GridCard({num}:{ num?: number}) {
     if (!loading && data && !num) {
       setNumProduct(data.length);
     }
-  }, [loading, data]);
+  }, [loading, data, num]);
 
   // augmente le nombre de card visible
   const moreProducts = ()=>{
@@ -144,7 +144,15 @@ export default function GridCard({num}:{ num?: number}) {
   // vérifie si le bouton doit encore être affiché ou non
   useEffect(()=>{
     setShowButton(numProduct == data?.length ? false : true)
-  }, [numProduct])
+  }, [numProduct, data])
+
+  if(loading){
+    return <Chargement/>
+  }
+
+  if (errors){
+    return <p className='error'>Erreur : {errors.message}</p>
+  }
 
   return ( <>
     {loading && <Chargement/>}
@@ -163,8 +171,6 @@ export default function GridCard({num}:{ num?: number}) {
         )).slice(0, numProduct)}
         </ul>
     }
-    { errors && <p className='error'>Une erreur est survenue lors de la récupération des recettes.</p>}
-
     { showButton &&
         <div className='products--button' onClick={moreProducts}>
           <Bouton size='big' rounded icon>

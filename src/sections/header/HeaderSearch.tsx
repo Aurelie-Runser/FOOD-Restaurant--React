@@ -30,15 +30,15 @@ export default function Header() {
             {productSearch && <ul className="header--search__input-liste">
                 {loading && <p className='header--search__input-loading'>Chargement...</p>}
 
-                {ProductsResulte
+                {ProductsResulte && ProductsResulte
                     .map((d) => (
-                        <li key={d.id} className="header--search__input-item">
+                        <li key={d.recipe_id} className="header--search__input-item">
                             <NavLink to={`/recettes/${d.recipe_id}`}>{d.title}</NavLink>
                         </li>
                     ))
                 }
 
-                {ProductsResulte.length==0 && <p className='header--search__input-noResult'>Aucune recette ne correspond à votre recherche.</p>}
+                {ProductsResulte?.length==0 && <p className='header--search__input-noResult'>Aucune recette ne correspond à votre recherche.</p>}
                 {errors && <p className='header--search__input-noResult' style={{color: 'red'}}>Une erreur est survenue lors de la récupération des recettes.</p>}
             </ul>}
         </div>

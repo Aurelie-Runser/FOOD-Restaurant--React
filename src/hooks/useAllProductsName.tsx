@@ -1,6 +1,15 @@
 import { useEffect, useState } from "react"
 
-export function useAllProductsName(){
+interface ProductName {
+    recipe_id: number,
+    title: string,
+}
+
+export function useAllProductsName():{
+    loading: boolean;
+    data: ProductName[] | null;
+    errors: Error | null;
+} {
 
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState(null)

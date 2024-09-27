@@ -1,6 +1,21 @@
 import { useEffect, useState } from "react"
 
-export function useAllProducts(){
+interface Product {
+    recipe_id: number,
+    title: string,
+    imgSrc: string,
+    prix: number,
+    note: number,
+    lien: string
+}
+
+interface AllProducts{
+    loading: boolean;
+    data: Product[] | null;
+    errors: Error | null;
+}
+
+export function useAllProducts():AllProducts{
 
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState(null)

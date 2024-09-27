@@ -163,7 +163,7 @@ export default function GridCard({num}:{ num?: number}) {
         )).slice(0, numProduct)}
         </ul>
     }
-    { errors && <p className='gridCard--error'>Une erreur est survenue lors de la récupération des recettes.</p>}
+    { errors && <p className='error'>Une erreur est survenue lors de la récupération des recettes.</p>}
 
     { showButton &&
         <div className='products--button' onClick={moreProducts}>

@@ -93,3 +93,9 @@ a:hover,
 a.active {
     color: var(--c-main);
 }
+
+.error{
+    color: red;
+    font-style: italic;
+    text-align: center;
+}

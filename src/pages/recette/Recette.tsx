@@ -115,8 +115,8 @@ export default function Recette() {
         </div>
 
         <div className="recette--donnees__autres">
-          <Bouton link={'/recettes/'+(recipeId-1)} size="big" rounded>Previous Menu</Bouton>
-          <Bouton link={'/recettes/'+(recipeId+1)} size="big" rounded>Next Menu</Bouton>
+          <Bouton link={'/recettes/'+(recipeId == 1 ? 6 : recipeId-1)} size="big" rounded>Previous Menu</Bouton>
+          <Bouton link={'/recettes/'+(recipeId == 6 ? 1 : recipeId+1)} size="big" rounded>Next Menu</Bouton>
         </div>
         
       </div>

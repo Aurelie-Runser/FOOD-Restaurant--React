@@ -23,7 +23,7 @@ export function useOneProduct(id){
             }).finally(() => {
                 setLoading(false)
             });
-    }, [])
+    }, [id])
 
     return{ loading, data, errors }
 }

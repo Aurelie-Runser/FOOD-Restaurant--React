@@ -10,10 +10,15 @@ export default function Recette() {
   const {id} = useParams()
   const recipeId = Number(id)
 
-  const {data} = useOneProduct(recipeId)
+  const { loading, data, errors } = useOneProduct(recipeId);
 
-  if(!data){
-    return <Chargement/>
+  // Gérer les erreurs, si besoin
+  if (errors) {
+    return <p className="error">Erreur : {errors.message}</p>;
+  }
+
+  if (loading) {
+    return <Chargement />
   }
 
   return <>

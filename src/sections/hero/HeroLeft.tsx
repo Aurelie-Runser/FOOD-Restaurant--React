@@ -15,7 +15,7 @@ export default function HeroLeft() {
             <p className='hero--left__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo, sed proin amet a vestibulum enim volutpat lacus. Volutpat arcu sit sed tortor etiam volutpat ipsum. </p>
 
             <div className='hero--left__buttons'>
-                <Bouton size='big' link='#'>Order Now</Bouton>
+                <Bouton size='big'>Order Now</Bouton>
 
                 <button className='h4 hero--left__buttons-play'>
                     <Icon name='play' size='big' color='whiteOrange' shadow/>

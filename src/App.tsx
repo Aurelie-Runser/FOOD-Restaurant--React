@@ -11,6 +11,7 @@ import './main.css'
 import Chargement from './components/Chargement'
 import ScrollToHash from './hooks/scrollToHash'
 import { CartContextProvider } from './hooks/useCart'
+import Cart from './pages/cart/Cart'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: '',
         element: <Home/>
+      },
+      {
+        path: 'cart',
+        element: <Cart/>
       },
       {
         path: 'recettes',

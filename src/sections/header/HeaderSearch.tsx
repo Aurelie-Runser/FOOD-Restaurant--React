@@ -48,9 +48,9 @@ export default function Header() {
         <span className="header--search__separation"></span>
 
         {/* Panier de l'utilisateur */}
-        <div className='header--search__panier p2'>
+        <NavLink to='/cart' className='header--search__panier p2'>
             {cart.length > 0 && <div className='panier--notif'>{cart.length}</div> }
             <Icon name='sac' />
-        </div>
+        </NavLink>
     </div>
 }

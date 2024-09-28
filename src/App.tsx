@@ -10,6 +10,7 @@ import Error from './pages/error/Error'
 import './main.css'
 import Chargement from './components/Chargement'
 import ScrollToHash from './hooks/scrollToHash'
+import { CartContextProvider } from './hooks/useCart'
 
 const router = createBrowserRouter([
   {
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
 
 function Layout(){
   const {state} = useNavigation()
-  return <>
+  return <CartContextProvider>
     <Header/>
     <ScrollToHash/>
     <main>
@@ -48,7 +49,7 @@ function Layout(){
       {state == 'loading' && <Chargement/>}
     </main>
     <Footer/>
-  </>
+  </CartContextProvider>
 }
 
 export default function App() {

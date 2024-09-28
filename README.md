@@ -23,4 +23,4 @@ Liste des tâches :
     - [ ] filtres pour la liste de produits
   - [X] page d'un produit
   - [ ] page du panier
-  - [ ] système de panier
+  - [X] système de panier

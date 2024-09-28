@@ -1,5 +1,7 @@
 import { useParams} from "react-router-dom"
+import { useContext } from "react"
 import { useOneProduct } from "../../hooks/useOneProduct"
+import { CartContext } from "../../hooks/useCart"
 import Bouton from "../../components/bouton/Bouton"
 import Chargement from "../../components/Chargement"
 import Icon from "../../components/icons/Icon"
@@ -7,8 +9,18 @@ import Icon from "../../components/icons/Icon"
 import './Recette.css'
 
 export default function Recette() {
+  const {cart, actionCart} = useContext(CartContext)
+
   const {id} = useParams()
   const recipeId = Number(id)
+
+  const handleAddToCart = () => {
+    actionCart(recipeId, 'add');
+  };
+
+  const handleRemoveFromCart = () => {
+    actionCart(recipeId, 'supp');
+  };
 
   const { loading, data, errors } = useOneProduct(recipeId);
 
@@ -43,7 +55,11 @@ export default function Recette() {
               </div>
 
               <div className="recette--donnes__button">
-                <Bouton size='big' rounded>Add to Cart</Bouton>
+                {cart.includes(recipeId) ?
+                  <Bouton size='small' rounded action={handleRemoveFromCart}>Remove to Cart</Bouton>
+                  :
+                  <Bouton size='big' rounded action={handleAddToCart}>Add to Cart</Bouton>
+                }
               </div>
             </div>
 

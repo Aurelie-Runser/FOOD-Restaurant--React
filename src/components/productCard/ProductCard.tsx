@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { CartContext } from '../../hooks/useCart';
 import Icon from '../icons/Icon';
 import Bouton from '../bouton/Bouton';
 
@@ -12,6 +14,16 @@ interface ProductCard {
 }
 
 export default function ProductCard({id, title, img, price, note}:ProductCard) {
+  const {cart, actionCart} = useContext(CartContext)
+
+  const handleAddToCart = () => {
+    actionCart(id, 'add');
+  };
+
+  const handleRemoveFromCart = () => {
+    actionCart(id, 'supp');
+  };
+  
   return (
     <div className='productCard'>
       <div className="productCard--img">
@@ -23,9 +35,13 @@ export default function ProductCard({id, title, img, price, note}:ProductCard) {
         <h4>{ title }</h4>
 
         <div className='productCard--left__buttons'>
-            <Bouton size='small'>Add to Cart</Bouton>
-            {/* <Bouton size='small'>Remove to Cart</Bouton> */}
-            <Bouton rounded link={'/recettes/'+id}><Icon name='eye' size='medium' color='orangeWhite'/></Bouton>
+          {cart.includes(id) ?
+            <Bouton size='small' action={handleRemoveFromCart}>Remove to Cart</Bouton>
+          :
+            <Bouton size='small' action={handleAddToCart}>Add to Cart</Bouton>
+          }
+
+          <Bouton rounded link={'/recettes/'+id}><Icon name='eye' size='medium' color='orangeWhite'/></Bouton>
         </div>
       </div>
 

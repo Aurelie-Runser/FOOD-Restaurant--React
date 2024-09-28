@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { useAllProductsName } from '../../hooks/useAllProductsName';
+import { CartContext } from '../../hooks/useCart';
 import Icon from '../../components/icons/Icon';
 import './Header.css'
-import { NavLink } from 'react-router-dom';
 
 export default function Header() {
+    const {cart} = useContext(CartContext)
 
     const {loading, data, errors} = useAllProductsName()
 
@@ -47,7 +49,7 @@ export default function Header() {
 
         {/* Panier de l'utilisateur */}
         <div className='header--search__panier p2'>
-            <div className='panier--notif'>2</div>
+            {cart.length > 0 && <div className='panier--notif'>{cart.length}</div> }
             <Icon name='sac' />
         </div>
     </div>

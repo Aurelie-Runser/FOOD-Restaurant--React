@@ -7,6 +7,12 @@
   box-sizing: border-box;
 }
 
+*::selection{
+    color: var(--c-white);
+    background-color: var(--c-main);
+    text-shadow: none;
+}
+
 body{
     background-color: var(--c-white);
 }
@@ -100,6 +106,23 @@ hr{
     background: var(--c-main);
     color: transparent;
 }
+
+legend{
+    font-size: var(--fs-litle);
+    font-weight: var(--fw-semibold);
+    color: var(--c-main);
+    margin-bottom: .5rem;
+}
+
+input{
+    accent-color: var(--c-main);
+}
+
+input:checked + label{
+    font-weight: var(--fw-medium);
+    color: var(--c-main)
+}
+
 
 .error{
     color: red;

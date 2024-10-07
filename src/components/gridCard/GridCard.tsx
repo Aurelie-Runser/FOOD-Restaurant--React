@@ -122,7 +122,7 @@ export default function GridCard({num, filters}:{ num?: number, filters?:object}
       }
 
       { filteredData.length == 0 && 
-          <p>Aucune Recette ne correspond à votre séléction.</p>
+          <p className='gridCard--aucune'>No menu matches your selection.</p>
       }
   </>
 }

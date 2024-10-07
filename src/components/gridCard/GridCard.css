@@ -12,8 +12,7 @@
   gap: 50px;
 }
 
-.gridCard-hero {
-  max-width: var(--small);
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 50px 10px;
+.gridCard--aucune{
+  text-align: center;
+  font-style: italic;
 }

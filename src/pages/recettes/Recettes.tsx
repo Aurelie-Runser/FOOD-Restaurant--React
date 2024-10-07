@@ -59,7 +59,24 @@ export default function Recettes() {
         checked: false
       }
     ],
-    allergie: [
+    dietary_info: [
+      {
+        value: 1,
+        name: 'Vegan',
+        checked: false
+      },
+      {
+        value: 2,
+        name: 'Gluten-Free',
+        checked: false
+      },
+      {
+        value: 3,
+        name: 'Low Carb',
+        checked: false
+      }
+    ],
+    allergies: [
       {
         value: 1,
         name: 'Peanut',
@@ -104,11 +121,22 @@ export default function Recettes() {
     </fieldset> 
 
     <fieldset>
-      <legend>Allergie</legend>
+      <legend>Dietary Info</legend>
 
-      {filters.allergie.map(al => (
+      {filters.dietary_info.map(di => (
+          <div key={di.name}>
+            <input type="checkbox" id={di.name} name={di.name} value={di.value} onChange={()=> dispatch({type: 'DIETARY', playload: di})} checked={di.checked} />
+            <label htmlFor={di.name}>{di.name}</label>
+          </div>
+      ))}
+    </fieldset> 
+
+    <fieldset>
+      <legend>Without Allergies</legend>
+
+      {filters.allergies.map(al => (
           <div key={al.name}>
-            <input type="checkbox" id={al.name} name={al.name} value={al.value} onChange={()=> dispatch({type: 'ALLERGIE', playload: al})} checked={al.checked} />
+            <input type="checkbox" id={al.name} name={al.name} value={al.value} onChange={()=> dispatch({type: 'ALLERGIES', playload: al})} checked={al.checked} />
             <label htmlFor={al.name}>{al.name}</label>
           </div>
       ))}

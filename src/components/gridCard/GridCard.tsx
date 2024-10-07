@@ -23,27 +23,49 @@ export default function GridCard({num, filters}:{ num?: number, filters?:object}
       let dataFiltre = data
       
       if(filters.cuisine){
-        const cuisineAffichee = filters.cuisine
+        const cuisineShow = filters.cuisine
           .filter(al => al.checked)
           .map(al => al.value);
 
         dataFiltre =
-          cuisineAffichee[0] == 0 
+          cuisineShow[0] == 0 
             ? data 
-            : data.filter(recette => recette.cuisine_id == cuisineAffichee[0]);
+            : data.filter(recette => recette.cuisine_id == cuisineShow[0]);
       }
       
       if(filters.goal){
-        const goalAffichee = filters.goal
+        const goalShow = filters.goal
           .filter(al => al.checked)
           .map(al => al.value);
 
         dataFiltre =
-          goalAffichee[0] == 0 
+          goalShow[0] == 0 
             ? dataFiltre 
-            : dataFiltre.filter(recette => recette.goal_id == goalAffichee[0]);
+            : dataFiltre.filter(recette => recette.goal_id == goalShow[0]);
+      }
+     
+      if(filters.dietary_info){
+        const dietaryShow = filters.dietary_info
+          .filter(di => di.checked)
+          .map(di => di.value);
+
+        dataFiltre =
+          dietaryShow.length == 0
+            ? dataFiltre 
+            : dataFiltre.filter(recette => dietaryShow.every(di => recette.dietary_info.includes(di)))
       }
       
+      if(filters.allergies){
+        const allergiesShow = filters.allergies
+          .filter(al => al.checked)
+          .map(al => al.value);
+
+        dataFiltre =
+          allergiesShow.length == 0
+            ? dataFiltre 
+            : dataFiltre.filter(recette => !recette.allergies.some(al => allergiesShow.includes(al)))
+      }
+
       setNumProduct(dataFiltre?.length | 0);
       setFilteredData(dataFiltre)
     }

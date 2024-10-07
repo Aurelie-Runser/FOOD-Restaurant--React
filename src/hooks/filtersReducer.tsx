@@ -10,10 +10,15 @@ export function filtersReducer(state, action){
                 ...state,
                 goal: state.goal.map(g => g == action.playload ? {...g, checked: true} : {...g, checked: false})
             }
-        case 'ALLERGIE':
+        case 'DIETARY':
             return {
                 ...state,
-                allergie: state.allergie.map(al => al == action.playload ? {...al, checked: !al.checked} : al)
+                dietary_info: state.dietary_info.map(di => di == action.playload ? {...di, checked: !di.checked} : di)
+            }
+        case 'ALLERGIES':
+            return {
+                ...state,
+                allergies: state.allergies.map(al => al == action.playload ? {...al, checked: !al.checked} : al)
             }
     }
 }

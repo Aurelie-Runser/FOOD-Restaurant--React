@@ -6,7 +6,7 @@ import './Products.css'
 export default function Products() {
   return (
     <section id='products' className='products'>
-      <Title subTitle='Services'>Most popular items</Title>
+      <Title subTitle='Products'>Most popular items</Title>
       
       <GridCard num={3}/>
     </section>

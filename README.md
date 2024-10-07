@@ -20,7 +20,7 @@ Liste des tâches :
   - [X] section Subscribe
     - [X] notification si inscrit
   - [X] page liste de tous les produits
-    - [ ] filtres pour la liste de produits
+    - [X] filtres pour la liste de produits
   - [X] page d'un produit
   - [ ] page du panier
   - [X] système de panier

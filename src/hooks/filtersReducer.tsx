@@ -3,12 +3,12 @@ export function filtersReducer(state, action){
         case 'CUISINE':
             return {
                 ...state,
-                cuisine: state.cuisine.map(c => c == action.playload ? {...c, checked: true} : {...c, checked: false})
+                cuisine: state.cuisine.map(c =>  ({...c, checked: c === action.playload}))
             }
         case 'GOAL':
             return {
                 ...state,
-                goal: state.goal.map(g => g == action.playload ? {...g, checked: true} : {...g, checked: false})
+                goal: state.goal.map(g => ({...g, checked: g === action.playload}))
             }
         case 'DIETARY':
             return {

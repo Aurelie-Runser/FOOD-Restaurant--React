@@ -72,19 +72,19 @@ export default function Recette() {
                 <span className="divers__type">Goal : </span>
                 <span className="divers__info">{ data.goal_name }</span>
               </div>
-              <div className="alergy">
-                <span className="divers__type">Allergies : </span>
-                <ul className="divers__liste">
-                  {data.allergies.map((al) => (
-                    <li key={al.allergy} className="liste-item">{ al.allergy }</li>
-                  ))}
-                </ul>
-              </div>
               <div className="dietary">
                 <span className="divers__type">Dietary Info : </span>
                 <ul className="divers__liste">
                   {data.dietaryInfo.map((al) => (
                       <li key={al.dietary_info} className="liste-item">{ al.dietary_info }</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="alergy">
+                <span className="divers__type">Allergies : </span>
+                <ul className="divers__liste">
+                  {data.allergies.map((al) => (
+                    <li key={al.allergy} className="liste-item">{ al.allergy }</li>
                   ))}
                 </ul>
               </div>

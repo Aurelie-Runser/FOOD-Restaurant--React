@@ -41,7 +41,7 @@ export default function ProductCard({id, title, img, price, note}:ProductCard) {
             <Bouton size='small' action={handleAddToCart}>Add to Cart</Bouton>
           }
 
-          <Bouton rounded link={'/recettes/'+id}><Icon name='eye' size='medium' color='orangeWhite'/></Bouton>
+          <Bouton rounded link={'/menu/'+id}><Icon name='eye' size='medium' color='orangeWhite'/></Bouton>
         </div>
       </div>
 

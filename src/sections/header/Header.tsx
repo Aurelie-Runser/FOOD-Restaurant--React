@@ -6,7 +6,7 @@ export default function Header() {
 
   const links = [
     ["home", "/"],
-    ["menu", "/recettes"],
+    ["menu", "/menu"],
     ["service", "/#services"],
     ["shope", "/#shope"]
   ]

@@ -37,7 +37,7 @@ export default function Recette() {
     return <>
       <div className="recette">
         <div className="recette--butonBack">
-          <Bouton size="small" link='/recettes'>Back to Menu</Bouton>
+          <Bouton size="small" link='/menu'>Back to Menu</Bouton>
         </div>
         
         <div className="recette--content">
@@ -132,8 +132,8 @@ export default function Recette() {
           </div>
 
           <div className="recette--donnees__autres">
-            <Bouton link={'/recettes/'+(recipeId == 1 ? 6 : recipeId-1)} size="big" rounded>Previous Menu</Bouton>
-            <Bouton link={'/recettes/'+(recipeId == 6 ? 1 : recipeId+1)} size="big" rounded>Next Menu</Bouton>
+            <Bouton link={'/menu/'+(recipeId == 1 ? 6 : recipeId-1)} size="big" rounded>Previous Menu</Bouton>
+            <Bouton link={'/menu/'+(recipeId == 6 ? 1 : recipeId+1)} size="big" rounded>Next Menu</Bouton>
           </div>
           
         </div>

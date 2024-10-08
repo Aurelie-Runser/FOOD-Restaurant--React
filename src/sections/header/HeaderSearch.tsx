@@ -35,7 +35,7 @@ export default function Header() {
                 {ProductsResulte && ProductsResulte
                     .map((d) => (
                         <li key={d.recipe_id} className="header--search__input-item">
-                            <NavLink to={`/recettes/${d.recipe_id}`}>{d.title}</NavLink>
+                            <NavLink to={`/menu/${d.recipe_id}`}>{d.title}</NavLink>
                         </li>
                     ))
                 }

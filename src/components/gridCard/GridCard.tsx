@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 
+import { CartContext } from '../../hooks/useCart';
 import { useAllProducts  } from '../../hooks/useAllProducts'
 import ProductCard from '../productCard/ProductCard'
 import Bouton from '../../components/bouton/Bouton'
@@ -8,8 +9,8 @@ import Icon from '../../components/icons/Icon'
 import './GridCard.css'
 import Chargement from '../Chargement'
 
-export default function GridCard({num, filters}:{ num?: number, filters?:object}) {
-
+export default function GridCard({num, filters, onlyInCart}:{ num?: number, filters?:object, onlyInCart?:boolean}) {
+  const {cart} = useContext(CartContext)
   const { loading, data, errors } = useAllProducts();
 
   // au chargement, soit afficher toutes les recettes, soit le nombre définie
@@ -19,6 +20,7 @@ export default function GridCard({num, filters}:{ num?: number, filters?:object}
 
   // lorsque les recettes sont chargées, afficher soit le nombre de card voulu (ne rien changer) ou toute
   useEffect(() => {
+    // s'il y a les filtres activés sur pour la grille
     if(data && filters){
       let dataFiltre = data
       
@@ -69,11 +71,20 @@ export default function GridCard({num, filters}:{ num?: number, filters?:object}
       setNumProduct(dataFiltre?.length | 0);
       setFilteredData(dataFiltre)
     }
-    else if (!loading && data && !num){
-      setNumProduct(data.length);
-      setFilteredData(data)
+    // si la liste n'affiche que les recettes dans le panier
+    else if (data && onlyInCart) {
+      const dataInCart = data.filter(d =>
+        cart.includes(d.recipe_id)
+      )
+      setNumProduct(dataInCart.length);
+      setFilteredData(dataInCart)
     }
-    else if (data) setFilteredData(data)
+    else if (data){
+      setFilteredData(data)
+      
+      // si la liste n'a pas de nombre prédéfini
+      if (!num) setNumProduct(data.length);
+    }
 
   }, [loading, data, num, filters]);
 
@@ -98,31 +109,39 @@ export default function GridCard({num, filters}:{ num?: number, filters?:object}
   return <>
     {loading && <Chargement/>}
     { filteredData &&
+      <>
         <ul className='gridCard gridCard--product'>
-        {filteredData.map((p) => (
-            <li key={p.recipe_id}>
-                <ProductCard 
-                    id={p.recipe_id}
-                    title={p.title}
-                    img={p.imgSrc}
-                    note={p.note}
-                    price={p.prix}
-                />
-            </li>
-        )).slice(0, numProduct)}
+          {filteredData.map((p) => (
+              <li key={p.recipe_id}>
+                  <ProductCard 
+                      id={p.recipe_id}
+                      title={p.title}
+                      img={p.imgSrc}
+                      note={p.note}
+                      price={p.prix}
+                  />
+              </li>
+          )).slice(0, numProduct)}
         </ul>
-      }
-      { filteredData && showButton &&
+
+        { showButton &&
           <div className='products--button' onClick={moreProducts}>
             <Bouton size='big' rounded icon>
               See More Products
               <Icon name='chevron' size="medium" color='whiteOrange'/>
             </Bouton>
           </div>
-      }
+        }
+      </>
+    }
 
-      { filteredData.length == 0 && 
-          <p className='gridCard--aucune'>No menu matches your selection.</p>
-      }
+    { filteredData.length == 0 && 
+      <>
+        { onlyInCart
+          ? <p className='gridCard--aucune'>No menu in your Cart.</p>
+          : <p className='gridCard--aucune'>No menu matches your selection.</p>
+        }
+      </>
+    }
   </>
 }

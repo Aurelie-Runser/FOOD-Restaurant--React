@@ -11,8 +11,7 @@ export default function Cart() {
   return <>
       <h1 className="page--title">My Cart</h1>
 
-
-      { cartPrice && <>
+      { cartPrice > 0 && <>
         <GridCard onlyInCart={true}/>
 
         <hr />
@@ -27,10 +26,10 @@ export default function Cart() {
         </div>
        </> }
 
-      { !cartPrice && <div className="cart--empty">
+      { cartPrice == 0 && <div className="cart--empty">
         <p>Your cart is empty.</p>
 
-        <Bouton size="big" link='/menu'>Add to my cart</Bouton>
+        <Bouton size="big" link='/menu'>Add Menu to my cart</Bouton>
        </div> }
       
 

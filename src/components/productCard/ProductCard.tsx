@@ -17,11 +17,11 @@ export default function ProductCard({id, title, img, price, note}:ProductCard) {
   const {cart, actionCart} = useContext(CartContext)
 
   const handleAddToCart = () => {
-    actionCart(id, 'add');
+    actionCart(id, price, 'add');
   };
 
   const handleRemoveFromCart = () => {
-    actionCart(id, 'supp');
+    actionCart(id, price, 'supp');
   };
   
   return (

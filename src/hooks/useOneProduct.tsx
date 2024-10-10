@@ -1,30 +1,5 @@
 import { useEffect, useState } from "react"
-
-interface Product {
-    recipe_id: number,
-    imgSrc: string,
-    title: string,
-    prix: number,
-    note: number,
-    lien: string,
-    cuisine_id: number,
-    cuisine_name: string,
-    goal_id: number,
-    goal_name: string,
-    allergies: Array<{allergy: string}>
-    dietaryInfo: Array<{dietary_info: string}>
-    des: string,
-    ingredients: Array<{
-        name: string,
-        quantity: number,
-        unit: string
-    }>,
-    instructions: Array<{
-        instruction_id: number,
-        step_number: number,
-        StepInstruction: string,
-    }>
-}
+import { Product } from "../interfaces/Product"
 
 export function useOneProduct(id:number):{
     loading: boolean;

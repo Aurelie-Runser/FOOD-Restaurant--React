@@ -15,11 +15,13 @@ export default function Recette() {
   const recipeId = Number(id)
 
   const handleAddToCart = () => {
-    actionCart(recipeId, 'add');
+    if(data)
+      actionCart(recipeId, data.prix, 'add');
   };
 
   const handleRemoveFromCart = () => {
-    actionCart(recipeId, 'supp');
+    if(data)
+      actionCart(recipeId, data.prix, 'supp');
   };
 
   const { loading, data, errors } = useOneProduct(recipeId);
@@ -75,16 +77,16 @@ export default function Recette() {
               <div className="dietary">
                 <span className="divers__type">Dietary Info : </span>
                 <ul className="divers__liste">
-                  {data.dietaryInfo.map((al) => (
-                      <li key={al.dietary_info} className="liste-item">{ al.dietary_info }</li>
+                  {data.dietaryInfo.map((al, index) => (
+                      <li key={index} className="liste-item">{ al }</li>
                   ))}
                 </ul>
               </div>
               <div className="alergy">
                 <span className="divers__type">Allergies : </span>
                 <ul className="divers__liste">
-                  {data.allergies.map((al) => (
-                    <li key={al.allergy} className="liste-item">{ al.allergy }</li>
+                  {data.allergies.map((al, index) => (
+                    <li key={index} className="liste-item">{ al }</li>
                   ))}
                 </ul>
               </div>

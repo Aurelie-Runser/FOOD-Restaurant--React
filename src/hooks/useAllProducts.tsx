@@ -1,17 +1,9 @@
 import { useEffect, useState } from "react"
-
-interface Product {
-    recipe_id: number,
-    title: string,
-    imgSrc: string,
-    prix: number,
-    note: number,
-    lien: string
-}
+import { ProductForCard } from '../interfaces/ProductForCard';
 
 interface AllProducts{
     loading: boolean;
-    data: Product[] | null;
+    data: ProductForCard[] | null;
     errors: Error | null;
 }
 
@@ -28,7 +20,7 @@ export function useAllProducts():AllProducts{
                 'Accept': 'application/json; charset=UTF-8',
               }
             }).then((res) => res.json()).then(data => {
-                data = data.map((d) => ({
+                data = data.map((d:ProductForCard) => ({
                     ...d, // pour garder toutes les propriétés et non uniquement 'prix'
                     note: d.note.toFixed(1),
                     prix: d.prix.toFixed(2)

@@ -2,32 +2,25 @@ import { useContext } from 'react';
 import { CartContext } from '../../hooks/useCart';
 import Icon from '../icons/Icon';
 import Bouton from '../bouton/Bouton';
+import { ProductForCard } from '../../interfaces/ProductForCard';
 
 import './ProductCard.css'
 
-interface ProductCard {
-    id: number,
-    title: string,
-    img: string,
-    price: number,
-    note: number,
-}
-
-export default function ProductCard({id, title, img, price, note}:ProductCard) {
+export default function ProductCard({recipe_id, title, imgSrc, prix, note}:ProductForCard) {
   const {cart, actionCart} = useContext(CartContext)
 
   const handleAddToCart = () => {
-    actionCart(id, price, 'add');
+    actionCart(recipe_id, prix, 'add');
   };
 
   const handleRemoveFromCart = () => {
-    actionCart(id, price, 'supp');
+    actionCart(recipe_id, prix, 'supp');
   };
   
   return (
     <div className='productCard'>
       <div className="productCard--img">
-        <img src={'/img/'+img+'.jpg'} alt={"photo de la recette "+title} />
+        <img src={'/img/'+imgSrc+'.jpg'} alt={"photo de la recette "+title} />
       </div>
 
       <div className="productCard--content">
@@ -35,13 +28,13 @@ export default function ProductCard({id, title, img, price, note}:ProductCard) {
         <h4>{ title }</h4>
 
         <div className='productCard--left__buttons'>
-          {cart.includes(id) ?
+          {cart.includes(recipe_id) ?
             <Bouton size='small' action={handleRemoveFromCart}>Remove to Cart</Bouton>
           :
             <Bouton size='small' action={handleAddToCart}>Add to Cart</Bouton>
           }
 
-          <Bouton rounded link={'/menu/'+id}><Icon name='eye' size='medium' color='orangeWhite'/></Bouton>
+          <Bouton rounded link={'/menu/'+recipe_id}><Icon name='eye' size='medium' color='orangeWhite'/></Bouton>
         </div>
       </div>
 
@@ -50,7 +43,7 @@ export default function ProductCard({id, title, img, price, note}:ProductCard) {
             <Icon name='etoile' color='whiteOrange'/>
             <span>{ note }</span>
         </div>
-        <span className='productCard__right--price h5'>$ { price }</span>
+        <span className='productCard__right--price h5'>$ { prix }</span>
       </div>
       </div>
     </div>

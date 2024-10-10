@@ -1,4 +1,11 @@
-export function filtersReducer(state, action){
+import { FilterOption, Filters } from "../interfaces/Filters"
+
+interface Action {
+    type: 'CUISINE' | 'GOAL' | 'DIETARY' | 'ALLERGIES';
+    playload: FilterOption;
+}
+
+export function filtersReducer(state:Filters, action:Action){
     switch(action.type){
         case 'CUISINE':
             return {

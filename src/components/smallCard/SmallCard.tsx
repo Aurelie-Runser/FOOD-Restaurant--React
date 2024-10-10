@@ -1,5 +1,4 @@
 import Icon from '../icons/Icon';
-import Bouton from '../bouton/Bouton';
 
 import './SmallCard.css'
 

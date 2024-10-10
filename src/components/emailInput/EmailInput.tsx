@@ -9,9 +9,9 @@ export default function EmailInput({ size }: { size?: string }) {
   const [email, setEmail] = useState("");
 
   // inscription à la newsletter
-  const formSubmit = useCallback((e: any) => {
+  const formSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formulaire = new FormData(e.target);
+    const formulaire = new FormData(e.currentTarget);
     const subscribe = formulaire.get("subscriber"); // on récupère la valeur du champ
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

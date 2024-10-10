@@ -15,14 +15,30 @@ export default function GridCard({num, filters, onlyInCart}:{ num?: number, filt
   const {cart} = useContext(CartContext)
   const { loading, data, errors } = useAllProducts();
 
-  // au chargement, soit afficher toutes les recettes, soit le nombre définie
   const [numProduct, setNumProduct] = useState(num || 0)
   const [showButton, setShowButton] = useState(false)
   const [filteredData, setFilteredData] = useState<ProductForCard[]>([]);
 
-  // lorsque les recettes sont chargées, afficher soit le nombre de card voulu (ne rien changer) ou toute
   useEffect(() => {
-    // s'il y a les filtres activés sur pour la grille
+    // si la liste n'affiche que les recettes dans le panier
+    if (data && onlyInCart) {
+      const dataInCart = data.filter(d =>
+        cart.includes(d.recipe_id)
+      )
+      setNumProduct(dataInCart.length);
+      setFilteredData(dataInCart)
+    }
+    else if (data){
+      setFilteredData(data)
+      
+      // si la liste n'a pas de nombre prédéfini, toutes les afficher
+      if (!num) setNumProduct(data.length);
+    }
+
+  }, [loading, data, num]);
+
+  // si les filtres sont utilisés
+  useEffect(() => {
     if(data && filters){
       let dataFiltre = data
       
@@ -34,7 +50,7 @@ export default function GridCard({num, filters, onlyInCart}:{ num?: number, filt
         dataFiltre =
           cuisineShow[0] == 0 
             ? data 
-            : data.filter((recette:Product) => recette.cuisine_id == cuisineShow[0]);
+            : data.filter((recette:ProductForCard) => recette.cuisine_id == cuisineShow[0]);
       }
       
       if(filters.goal){
@@ -73,29 +89,12 @@ export default function GridCard({num, filters, onlyInCart}:{ num?: number, filt
       setNumProduct(dataFiltre?.length | 0);
       setFilteredData(dataFiltre)
     }
-    // si la liste n'affiche que les recettes dans le panier
-    else if (data && onlyInCart) {
-      const dataInCart = data.filter(d =>
-        cart.includes(d.recipe_id)
-      )
-      setNumProduct(dataInCart.length);
-      setFilteredData(dataInCart)
-    }
-    else if (data){
-      setFilteredData(data)
-      
-      // si la liste n'a pas de nombre prédéfini
-      if (!num) setNumProduct(data.length);
-    }
+  }, [data, filters]);
 
-  }, [loading, data, num, filters]);
-
-  // augmente le nombre de card visible
   const moreProducts = ()=>{
     setNumProduct(n => n += 3)
   }
 
-  // vérifie si le bouton "See More Products" doit être affiché ou non
   useEffect(()=>{
     setShowButton(numProduct == filteredData?.length || filters ? false : true)
   }, [numProduct, filteredData])
@@ -110,6 +109,7 @@ export default function GridCard({num, filters, onlyInCart}:{ num?: number, filt
 
   return <>
     {loading && <Chargement/>}
+    
     { filteredData &&
       <>
         <ul className='gridCard gridCard--product'>

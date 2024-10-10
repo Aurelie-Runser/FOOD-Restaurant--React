@@ -1,6 +1,7 @@
 import { filtersReducer } from "../../hooks/filtersReducer";
 import GridCard from "../../components/gridCard/GridCard";
 import { useReducer } from "react";
+import { FilterOption } from "../../interfaces/Filters";
 
 import "./Recettes.css"
 
@@ -104,7 +105,7 @@ export default function Recettes() {
       <fieldset>
         <legend>Cuisine</legend>
 
-        {filters.cuisine.map(c => (
+        {filters.cuisine.map((c:FilterOption) => (
             <div key={c.name}>
               <input type="radio" id={c.name} name='cuisine' value={c.value} onChange={()=> dispatch({type: 'CUISINE', playload: c})} checked={c.checked} />
               <label htmlFor={c.name}>{c.name}</label>
@@ -115,7 +116,7 @@ export default function Recettes() {
       <fieldset>
         <legend>Goal</legend>
 
-        {filters.goal.map(g => (
+        {filters.goal.map((g:FilterOption) => (
             <div key={g.name}>
               <input type="radio" id={g.name} name='goal' value={g.value} onChange={()=> dispatch({type: 'GOAL', playload: g})} checked={g.checked} />
               <label htmlFor={g.name}>{g.name}</label>
@@ -126,7 +127,7 @@ export default function Recettes() {
       <fieldset>
         <legend>Dietary Info</legend>
 
-        {filters.dietary_info.map(di => (
+        {filters.dietary_info.map((di:FilterOption) => (
             <div key={di.name}>
               <input type="checkbox" id={di.name} name={di.name} value={di.value} onChange={()=> dispatch({type: 'DIETARY', playload: di})} checked={di.checked} />
               <label htmlFor={di.name}>{di.name}</label>
@@ -137,7 +138,7 @@ export default function Recettes() {
       <fieldset>
         <legend>Without Allergies</legend>
 
-        {filters.allergies.map(al => (
+        {filters.allergies.map((al:FilterOption) => (
             <div key={al.name}>
               <input type="checkbox" id={al.name} name={al.name} value={al.value} onChange={()=> dispatch({type: 'ALLERGIES', playload: al})} checked={al.checked} />
               <label htmlFor={al.name}>{al.name}</label>

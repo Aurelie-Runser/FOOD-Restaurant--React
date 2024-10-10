@@ -5,18 +5,20 @@ import { useAllProducts  } from '../../hooks/useAllProducts'
 import ProductCard from '../productCard/ProductCard'
 import Bouton from '../../components/bouton/Bouton'
 import Icon from '../../components/icons/Icon'
+import Chargement from '../Chargement'
+import { Filters } from '../../interfaces/Filters';
+import { ProductForCard } from '../../interfaces/ProductForCard';
 
 import './GridCard.css'
-import Chargement from '../Chargement'
 
-export default function GridCard({num, filters, onlyInCart}:{ num?: number, filters?:object, onlyInCart?:boolean}) {
+export default function GridCard({num, filters, onlyInCart}:{ num?: number, filters?:Filters, onlyInCart?:boolean}) {
   const {cart} = useContext(CartContext)
   const { loading, data, errors } = useAllProducts();
 
   // au chargement, soit afficher toutes les recettes, soit le nombre définie
   const [numProduct, setNumProduct] = useState(num || 0)
   const [showButton, setShowButton] = useState(false)
-  const [filteredData, setFilteredData] = useState([]);
+  const [filteredData, setFilteredData] = useState<ProductForCard[]>([]);
 
   // lorsque les recettes sont chargées, afficher soit le nombre de card voulu (ne rien changer) ou toute
   useEffect(() => {
@@ -28,11 +30,11 @@ export default function GridCard({num, filters, onlyInCart}:{ num?: number, filt
         const cuisineShow = filters.cuisine
           .filter(al => al.checked)
           .map(al => al.value);
-
+        
         dataFiltre =
           cuisineShow[0] == 0 
             ? data 
-            : data.filter(recette => recette.cuisine_id == cuisineShow[0]);
+            : data.filter((recette:Product) => recette.cuisine_id == cuisineShow[0]);
       }
       
       if(filters.goal){
@@ -54,7 +56,7 @@ export default function GridCard({num, filters, onlyInCart}:{ num?: number, filt
         dataFiltre =
           dietaryShow.length == 0
             ? dataFiltre 
-            : dataFiltre.filter(recette => dietaryShow.every(di => recette.dietary_info.includes(di)))
+            : dataFiltre.filter(recette => dietaryShow.every(di => recette.dietary_info?.includes(di)))
       }
       
       if(filters.allergies){
@@ -65,7 +67,7 @@ export default function GridCard({num, filters, onlyInCart}:{ num?: number, filt
         dataFiltre =
           allergiesShow.length == 0
             ? dataFiltre 
-            : dataFiltre.filter(recette => !recette.allergies.some(al => allergiesShow.includes(al)))
+            : dataFiltre.filter(recette => !recette.allergies?.some(al => allergiesShow.includes(al)))
       }
 
       setNumProduct(dataFiltre?.length | 0);
@@ -114,11 +116,11 @@ export default function GridCard({num, filters, onlyInCart}:{ num?: number, filt
           {filteredData.map((p) => (
               <li key={p.recipe_id}>
                   <ProductCard 
-                      id={p.recipe_id}
+                      recipe_id={p.recipe_id}
                       title={p.title}
-                      img={p.imgSrc}
+                      imgSrc={p.imgSrc}
                       note={p.note}
-                      price={p.prix}
+                      prix={p.prix}
                   />
               </li>
           )).slice(0, numProduct)}

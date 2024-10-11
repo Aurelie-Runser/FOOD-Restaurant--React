@@ -114,11 +114,8 @@ legend{
     margin-bottom: .5rem;
 }
 
-input{
+input, label{
     accent-color: var(--c-main);
-}
-
-label{
     cursor: pointer;
 }
 

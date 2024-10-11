@@ -1,0 +1,14 @@
+.errorPage{
+    margin: 40px 0;
+}
+
+.errorPage *{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+}
+
+.errorPage p {
+    margin: 20px auto 80px auto;
+}

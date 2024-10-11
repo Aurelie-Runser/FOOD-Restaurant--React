@@ -17,7 +17,7 @@ export function useAllProductsName():{
 
     
     useEffect(() => {
-        fetch('http://localhost:4000/recipes-title', {
+        fetch(import.meta.env.VITE_API_URL + '/recipes-title', {
               headers: {
                 'Accept': 'application/json; charset=UTF-8',
               }

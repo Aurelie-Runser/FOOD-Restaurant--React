@@ -12,7 +12,7 @@ export function useOneProduct(id:number):{
     const [errors, setErrors] = useState(null)
     
     useEffect(() => {
-        fetch('http://localhost:4000/recipes/'+id, {
+        fetch(import.meta.env.VITE_API_URL + '/recipes/'+id, {
               headers: {
                 'Accept': 'application/json; charset=UTF-8',
               }

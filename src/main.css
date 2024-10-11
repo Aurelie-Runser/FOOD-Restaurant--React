@@ -23,11 +23,30 @@ body{
     color: var(--c-black);
     font-family: var(--ff-Montserrat);
 }
-  
-main{
+
+.mainMobile{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.mainPC{
+    display: none;
     margin: 30px auto;
     width: 85vw;
     max-width: 1605px;
+}
+
+@media screen and (min-width: 1024px) {
+    .mainMobile{
+        display: none;
+    }
+
+    .mainPC{
+        display: block;
+    }
 }
   
 section,

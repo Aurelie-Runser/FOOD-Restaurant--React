@@ -49,9 +49,12 @@ function Layout(){
   return <CartContextProvider>
     <Header/>
     <ScrollToHash/>
-    <main>
+    <main className='mainPC'>
       {state != 'loading' && <Outlet/>}
       {state == 'loading' && <Chargement/>}
+    </main>
+    <main className='mainMobile'>
+      <h2>Version Desktop only.</h2>
     </main>
     <Footer/>
   </CartContextProvider>

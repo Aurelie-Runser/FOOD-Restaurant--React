@@ -118,6 +118,10 @@ input{
     accent-color: var(--c-main);
 }
 
+label{
+    cursor: pointer;
+}
+
 input:checked + label{
     font-weight: var(--fw-medium);
     color: var(--c-main)

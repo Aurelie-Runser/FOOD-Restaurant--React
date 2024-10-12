@@ -1,26 +1,26 @@
 # Food Restaurant - React (Projet en cours)
 
 Projet personnel de refonte d'un projet existant afin d'apprendre **React.js** et de m'améliorer en **TypeScript**.
+<br/>
+<br/>
+J'ai essayé d'utiliser différents hooks pour apprendre à les utiliser dans les contextes adaptés à chacun.
 
-Liste des tâches :
-  - [X] header
-    - [X] barre de recherche fonctionnel
-  - [X] footer
-  - [X] hero
-    - [X] composant card small
-  - [X] section Information
-  - [X] section Products
-    - [X] composant card produit
-    - [X] rendre la liste des produits dinamique avec un bouton +/- de produits
-    - [X] utiliser l'api de recette avec Fetch pour afficher les produits
-  - [X] section Services
-      - [X] composant card service
-  - [X] section Testimonials
-    - [X] carrousel de plusieurs avis
-  - [X] section Subscribe
-    - [X] notification si inscrit
-  - [X] page liste de tous les produits
-    - [X] filtres pour la liste de produits
-  - [X] page d'un produit
-  - [X] page du panier
-  - [X] système de panier
+- **useState** pour tous les éléments ayant une interaction ou changement divers 
+  - barre de recherche :
+  - input d'email
+  - grille des recettes
+  - des reviews
+  - ...
+- **useEffect** pour tous les changements d'élément initiés par un autre élément :
+  - notification
+  - récupération de la liste des recettes
+  - filtrage des recettes
+  - l'enregistrement du panier dans le local storage
+- **useCallback** pour mémoriser une fonction et ne plus avoir besoin de la redéfinir :
+  - pour afficher la notification lors de l'inscription à la news letters
+- **useReducer** pour gérer des états complexes :
+  - le filtrage des recettes
+- **useContext** pour avoir des variables globales :
+  - gérer le panier
+
+## Lien vers le site : https://restaurant-react.aurelierunser.fr

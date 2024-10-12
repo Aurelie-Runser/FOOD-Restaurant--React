@@ -1,0 +1,69 @@
+[
+    {
+        "recipe_id":1,
+        "title":"Gyro Sandwich",
+        "imgSrc":"GyroSandwich",
+        "prix":15,
+        "note":5,
+        "lien":"gyro-sandwhic",
+        "cuisine_id":5,
+        "goal_id":1,
+        "allergies":[1,3],
+        "dietary_info":[1]
+    },{
+        "recipe_id":2,
+        "title":"Enchilade",
+        "imgSrc":"Enchilade",
+        "prix":25.5,
+        "note":4.9,
+        "lien":"enchilade",
+        "cuisine_id":2,
+        "goal_id":3,
+        "dietary_info":[2],
+        "allergies":[2,3]
+    },{
+        "recipe_id":3,
+        "title":"Green Beans",
+        "imgSrc":"GreenBeans",
+        "prix":12,
+        "note":4.7,
+        "lien":"green-beans",
+        "cuisine_id":5,
+        "goal_id":2,
+        "dietary_info":[1,3],
+        "allergies":[1]
+    },{
+        "recipe_id":4,
+        "title":"Pizza",
+        "imgSrc":"Pizza",
+        "prix":18.5,
+        "note":4.5,
+        "lien":"pizza",
+        "cuisine_id":1,
+        "goal_id":1,
+        "dietary_info":[1,2],
+        "allergies":[2]
+    },{
+        "recipe_id":5,
+        "title":"Chicken Pot Pie",
+        "imgSrc":"ChickenPotPie",
+        "prix":25,
+        "note":4.2,
+        "lien":"chicken-pot-pie",
+        "cuisine_id":4,
+        "goal_id":3,
+        "allergies":[1,2],
+        "dietary_info":[3]
+    },{
+        "recipe_id":6,
+        "title":"Green Salad",
+        "imgSrc":"GreenSalad",
+        "prix":15,
+        "note":3.8,
+        "lien":"green-salad",
+        "cuisine_id":3,
+        "goal_id":2,
+        "allergies":[3],
+        "dietary_info":[2,3]
+    }
+]

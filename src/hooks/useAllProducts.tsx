@@ -1,3 +1,5 @@
+import recipes from "./donnees/recipes.json"
+
 import { useEffect, useState } from "react"
 import { ProductForCard } from '../interfaces/ProductForCard';
 
@@ -9,11 +11,11 @@ interface AllProducts{
 
 export function useAllProducts():AllProducts{
 
-    const [loading, setLoading] = useState(true)
-    const [data, setData] = useState(null)
-    const [errors, setErrors] = useState(null)
+    const [loading, setLoading] = useState<boolean>(true);
+    const [data, setData] = useState<ProductForCard[] | null>(null);
+    const [errors, setErrors] = useState<Error | null>(null);
 
-    
+    /*
     useEffect(() => {
         fetch(import.meta.env.VITE_API_URL + '/recipes', {
               headers: {
@@ -32,6 +34,22 @@ export function useAllProducts():AllProducts{
                 setLoading(false)
             });
     }, [])
+    */
+
+    useEffect(() => {
+        try {
+            const formattedData = (recipes as ProductForCard[]).map((d: ProductForCard) => ({
+                ...d,
+                note: parseFloat(d.note.toFixed(1)),
+                prix: parseFloat(d.prix.toFixed(2))
+            }));
+            setData(formattedData);
+        } catch (e) {
+            setErrors(e instanceof Error ? e : new Error("Les recettes n'ont pas pu être récupérées."));
+        } finally {
+            setLoading(false);
+        }
+    }, []);
 
     return{ loading, data, errors }
 }

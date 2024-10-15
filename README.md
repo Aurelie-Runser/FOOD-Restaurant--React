@@ -1,9 +1,9 @@
-# Food Restaurant - React (Projet en cours)
+# FOOD Restaurant - React
 
 Projet personnel de refonte d'un projet existant afin d'apprendre **React.js** et de m'améliorer en **TypeScript**.
 <br/>
 <br/>
-J'ai essayé d'utiliser différents hooks pour apprendre à les utiliser dans les contextes adaptés à chacun.
+J'ai essayé d'utiliser différents hooks pour apprendre à les utiliser dans des contextes adaptés à chacun.
 
 - **useState** pour tous les éléments ayant une interaction ou changement divers 
   - barre de recherche :
@@ -22,5 +22,9 @@ J'ai essayé d'utiliser différents hooks pour apprendre à les utiliser dans le
   - le filtrage des recettes
 - **useContext** pour avoir des variables globales :
   - gérer le panier
+- **lazy** et **Suspense** pour charger les pages seulements lorsqu'elles sont visités :
+  - la page Menu
+  - les fiches des recettes
+  - le panier
 
 ## Lien vers le site : https://restaurant-react.aurelierunser.fr

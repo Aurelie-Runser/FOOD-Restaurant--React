@@ -5,14 +5,14 @@ import Header from './sections/header/Header'
 import Home from './pages/Home'
 const Recettes = lazy(() => import("./pages/recettes/Recettes"))
 const Recette = lazy(() => import("./pages/recette/Recette"))
+const Cart = lazy(() => import("./pages/cart/Cart"))
 import Footer from './sections/footer/Footer'
 import Error from './pages/error/Error'
-
-import './main.css'
+import { CartContextProvider } from './hooks/useCart'
 import Chargement from './components/Chargement'
 import ScrollToHash from './hooks/scrollToHash'
-import { CartContextProvider } from './hooks/useCart'
-import Cart from './pages/cart/Cart'
+
+import './main.css'
 
 const router = createBrowserRouter([
   {
@@ -26,7 +26,10 @@ const router = createBrowserRouter([
       },
       {
         path: 'cart',
-        element: <Cart/>
+        element:
+          <Suspense fallback={<Chargement />}>
+            <Cart />
+          </Suspense>,
       },
       {
         path: 'menu',

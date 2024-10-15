@@ -1,9 +1,10 @@
 // import { useState } from 'react'
+import { Suspense, lazy } from 'react'
 import { createBrowserRouter, Outlet, RouterProvider, useNavigation } from 'react-router-dom'
 import Header from './sections/header/Header'
 import Home from './pages/Home'
-import Recettes from './pages/recettes/Recettes'
-import Recette from './pages/recette/Recette'
+const Recettes = lazy(() => import("./pages/recettes/Recettes"))
+const Recette = lazy(() => import("./pages/recette/Recette"))
 import Footer from './sections/footer/Footer'
 import Error from './pages/error/Error'
 
@@ -32,11 +33,17 @@ const router = createBrowserRouter([
         children: [
           {
             path: '',
-            element: <Recettes/>,
+            element:
+              <Suspense fallback={<Chargement />}>
+                <Recettes />
+              </Suspense>,
           },
           {
             path: ':id',
-            element: <Recette/>,
+            element: 
+              <Suspense fallback={<Chargement />}>
+                <Recette />
+              </Suspense>,
           }
         ]
       }

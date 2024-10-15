@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className='header'>
       <div className='header--content'>
-        <img className='header--logo' src="/img/Logo.png" alt="Logo du restaurant FOOD" />
+        <img className='header--logo' src="/img/Logo.webp" alt="Logo de FOOD Restaurant" />
 
         <nav>
           <ul className='h5 header--liste'>

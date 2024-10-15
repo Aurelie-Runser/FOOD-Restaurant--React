@@ -44,7 +44,7 @@ export default function Recette() {
         
         <div className="recette--content">
           <div className="recette--img">
-            <img src={'/img/'+data.imgSrc+'.jpg'} alt={" photo du plat : "+data.title} />
+            <img src={'/img/'+data.imgSrc+'.webp'} alt={" photo de la recette "+data.title} />
           </div>
 
           <div className="recette--donnees">

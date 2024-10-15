@@ -15,7 +15,7 @@ const smallCardContent = [
         price: 9.15,
     },
     {
-        img: 'Pizza',
+        img: 'PizzaSmall',
         title: 'Pizza',
         text: 'Mushroom Sauce',
         price: 6.15,

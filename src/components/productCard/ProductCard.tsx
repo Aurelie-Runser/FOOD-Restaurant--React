@@ -20,7 +20,7 @@ export default function ProductCard({recipe_id, title, imgSrc, prix, note}:Produ
   return (
     <div className='productCard'>
       <div className="productCard--img">
-        <img src={'/img/'+imgSrc+'.jpg'} alt={"photo de la recette "+title} />
+        <img src={'/img/'+imgSrc+'.webp'} alt={"photo de la recette "+title} />
       </div>
 
       <div className="productCard--content">

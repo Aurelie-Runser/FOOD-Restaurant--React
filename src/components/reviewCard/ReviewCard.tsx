@@ -12,7 +12,7 @@ export default function ReviewCard({children, pp, name, job}:ReviewCard) {
   return (
     <div className='reviewsCard'>
         <div className='reviewsCard--writer'>
-            <img src={pp} alt="" />
+            <img src={pp} alt="photo du reviewer" />
             <div className='reviewsCard--writer__info'>
                 <p className='h5'>{name}</p>
                 <p className='p-small'>{job}</p>

@@ -19,7 +19,7 @@ interface FooterColProps{
 export default function FooterCol({ logo, title, liens, texte, icons, email }:FooterColProps) {
   return (
     <div className="footerCol">
-      {logo && <img className="footerCol--logo" src='/img/Logo.png' />}
+      {logo && <img className="footerCol--logo" src='/img/Logo.webp' alt='Logo de FOOD Restaurant' />}
 
       {title && <h4 className="footerCol--title">{title}</h4>}
 

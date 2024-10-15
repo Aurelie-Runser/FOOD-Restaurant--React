@@ -12,7 +12,7 @@ export default function Reviews() {
       <div className='reviews--content'>
         <ReviewsCarrousel/>
 
-        <img src="/img/FritesBurgers.png" alt="Photo d'un menu burger frite." />
+        <img src="/img/FritesBurgers.webp" alt="Photo d'un menu burger frite." />
       </div>
     </section>
   )

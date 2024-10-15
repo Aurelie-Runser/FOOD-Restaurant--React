@@ -6,7 +6,7 @@ export default function Subscribe() {
 
   return (
     <section id='subscribe' className='subscribe'>
-        <img src="/img/Burger.png" alt="photo d'un burger" />
+        <img src="/img/Burger.webp" alt="photo d'un burger" />
 
         <div className='subscribe--content'>
             <h3>Subcribe to our newsletter</h3>

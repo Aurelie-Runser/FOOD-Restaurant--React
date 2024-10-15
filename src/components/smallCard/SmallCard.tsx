@@ -27,7 +27,7 @@ export default function SmallCard({title, img, text, price}:SmallCard) {
         </div>
 
         <div className="smallCard--img">
-            <img src={'/img/'+img+'.png'} alt={"photo de "+title} />
+            <img src={'/img/'+img+'.webp'} alt={"photo de "+title} />
         </div>
     </div>
   )

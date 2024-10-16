@@ -1,6 +1,6 @@
 .serviceCard{
     max-width: 500px;
-    padding: 80px 55px;
+    padding: 100px 55px;
     background: var(--c-white);
     border-radius: 35px;
     overflow: hidden;

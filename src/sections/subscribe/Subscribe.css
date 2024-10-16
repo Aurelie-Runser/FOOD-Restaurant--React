@@ -4,7 +4,7 @@
     justify-content: space-around;
     padding: 74px 50px;
     width: 85vw;
-    max-width: var(--large4XL);
+    max-width: 100%;
     height: 300px;
     border-radius: 50px;
     background-color: var(--c-black);
